@@ -1,5 +1,8 @@
+/**
+ * theme to be used in the application
+ */
 import { createTheme } from "@vanilla-extract/css";
-import { theme } from "./theme.css";
+import { theme } from "./themeContract.css";
 
 const colors = {
   neutral: {
@@ -214,9 +217,18 @@ const palette = {
   icon: iconColor,
 };
 
-export const defaultTheme = {
+const shadows = {
+  100: "0px 1px 1px 0px rgba(7, 57, 62, 0.10)",
+  200: "0px 1px 5px 0px rgba(7, 57, 62, 0.25)",
+  300: "0px 4px 11px 0px rgba(7, 57, 62, 0.15)",
+  400: "0px 5px 25px 0px rgba(7, 57, 62, 0.15)",
+  500: "0px 10px 40px 0px rgba(7, 57, 62, 0.15)",
+};
+
+const values = {
   colors,
   palette,
+  shadows,
   components: {
     tag: {
       default: {
@@ -266,4 +278,9 @@ export const defaultTheme = {
   },
 };
 
-export const seazonTheme = createTheme(theme, defaultTheme);
+/*
+ * used in high level components
+ * called once in the application
+ * to access the theme values for each styles, see ./themeV2.css.ts
+ */
+export const seazonTheme = createTheme(theme, values);

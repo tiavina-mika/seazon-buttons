@@ -1,3 +1,7 @@
+/**
+ * this is a theme contract for themes
+ * so all the themes will have the same structure
+ */
 import { createThemeContract } from "@vanilla-extract/css";
 
 const colors = {
@@ -205,6 +209,18 @@ const iconColor = {
   },
 };
 
+const shadows = {
+  100: null,
+  200: null,
+  300: null,
+  400: null,
+  500: null,
+};
+
+/**
+ * use the contract in each style instead of the theme itself
+ * @example style({ color: theme.colors.primary.default })
+ */
 export const theme = createThemeContract({
   colors,
   palette: {
@@ -214,6 +230,7 @@ export const theme = createThemeContract({
     border: borderColor,
     icon: iconColor,
   },
+  shadows,
   components: {
     tag: {
       default: {
