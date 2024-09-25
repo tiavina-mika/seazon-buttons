@@ -9,6 +9,7 @@ const Button = ({
   className,
   size = "md",
   disabled = false,
+  rightIcon
 }) => {
   return (
     <button
@@ -20,6 +21,7 @@ const Button = ({
       )}
     >
       {text}
+      {rightIcon}
     </button>
   );
 };
