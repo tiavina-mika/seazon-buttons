@@ -48,7 +48,7 @@ function App() {
         {/* sizes */}
         <div>
           <Title>Sizes</Title>
-          <div>
+          <div className={classes.row}>
             {sizes.map((size, index) => (
               <Button
                 text="label"
