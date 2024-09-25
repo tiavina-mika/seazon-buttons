@@ -3,12 +3,18 @@ import classNames from "classnames";
 import { buttonVariants } from "./button.css";
 // import * as classes from "./button.css";
 
-const Button = ({ text, variant = "default", className, size = "md" }) => {
+const Button = ({
+  text,
+  variant = "default",
+  className,
+  size = "md",
+  disabled = false,
+}) => {
   return (
     <button
       className={classNames(
         // classes.root,
-        buttonVariants({ size, variant }),
+        buttonVariants({ size, variant, disabled }),
         // classes.sizeVariants[size],
         className
       )}

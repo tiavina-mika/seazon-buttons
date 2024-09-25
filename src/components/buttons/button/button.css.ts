@@ -47,6 +47,14 @@ export const buttonVariants = recipe({
         },
       },
     },
+    disabled: {
+      true: {
+        color: theme.palette.text.disabled.light,
+        "&:hover": {
+          cursor: "none",
+        },
+      },
+    },
     size: {
       sm: {
         padding: "8px 12px",
@@ -92,10 +100,50 @@ export const buttonVariants = recipe({
         padding: "16px",
       },
     },
+    // disabled
+    {
+      variants: {
+        variant: "default",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.default.backgroundDisabled,
+        "&:hover": {
+          backgroundColor: theme.components.button.default.backgroundDisabled,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "neutral",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.neutral.backgroundDisabled,
+        borderColor: theme.palette.border.disabled.default,
+        "&:hover": {
+          backgroundColor: theme.components.button.neutral.backgroundDisabled,
+          borderColor: theme.palette.border.disabled.default,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "text",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.text.backgroundDisabled,
+        "&:hover": {
+          backgroundColor: theme.components.button.text.backgroundDisabled,
+        },
+      },
+    },
   ],
 
   defaultVariants: {
     variant: "default",
     size: "md",
+    disabled: false,
   },
 });
