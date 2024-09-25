@@ -9,6 +9,9 @@ export const button = recipe({
     fontWeight: 500,
     letterSpacing: 0.3,
     lineHeight: 1,
+    gap: 8,
+    display: "flex",
+    alignItems: "center",
   },
 
   variants: {
