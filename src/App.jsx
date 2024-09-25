@@ -6,6 +6,7 @@ function App() {
     <div className={seazonTheme}>
       {/* <Tag label="label" color="secondary" /> */}
       <Button text="label" variant="default" />
+      <Button text="label" variant="neutral" />
     </div>
   );
 }

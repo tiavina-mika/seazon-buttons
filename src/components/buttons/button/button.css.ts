@@ -20,10 +20,20 @@ export const buttonVariants = recipe({
   variants: {
     variant: {
       default: {
+        border: "2px solid transparent",
         backgroundColor: theme.components.button.default.background,
         "&:hover": {
-          border:
-            "2px solid " + theme.components.button.default.backgroundHover,
+          cursor: "pointer",
+          backgroundColor: theme.components.button.default.backgroundHover,
+        },
+      },
+      neutral: {
+        border: "1px solid transparent",
+        backgroundColor: theme.components.button.neutral.background,
+        "&:hover": {
+          cursor: "pointer",
+          border: "1px solid " + theme.components.button.neutral.border,
+          backgroundColor: theme.components.button.neutral.backgroundHover,
         },
       },
     },

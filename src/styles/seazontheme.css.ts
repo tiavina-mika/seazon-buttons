@@ -278,7 +278,13 @@ const values = {
     button: {
       default: {
         background: palette.background.primary.default,
-        backgroundHover: palette.border.neutral.dark,
+        backgroundHover: palette.backgroundHover.primary.default,
+        border: palette.border.neutral.dark,
+      },
+      neutral: {
+        background: "#fff",
+        backgroundHover: palette.backgroundHover.primary.default,
+        border: palette.border.neutral.dark,
       },
     },
   },

@@ -281,6 +281,12 @@ export const theme = createThemeContract({
       default: {
         background: null,
         backgroundHover: null,
+        border: null,
+      },
+      neutral: {
+        background: null,
+        backgroundHover: null,
+        border: null,
       },
     },
   },
