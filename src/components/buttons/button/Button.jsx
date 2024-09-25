@@ -1,23 +1,20 @@
 import React from "react";
 import classNames from "classnames";
-import * as classes from "./button.css";
+import { buttonVariants } from "./button.css";
+// import * as classes from "./button.css";
 
-const Button = ({ text, variant = "primary", className, size = "md" }) => {
+const Button = ({ text, variant = "default", className, size = "md" }) => {
   return (
-    <div
+    <button
       className={classNames(
-        classes.root,
-        classes.sizeVariants[size],
-        {
-          // [classes.disabled]: disabled,
-          // [classes.colorVariants[color]]: !disabled,
-          // [classes.neutralDisabled]: disabled && color === "neutral",
-        },
+        // classes.root,
+        buttonVariants({ size, variant }),
+        // classes.sizeVariants[size],
         className
       )}
     >
       {text}
-    </div>
+    </button>
   );
 };
 

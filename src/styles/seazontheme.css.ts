@@ -2,7 +2,7 @@
  * theme to be used in the application
  */
 import { createTheme } from "@vanilla-extract/css";
-import { theme } from "./themeContract.css";
+import { theme } from "./theme.css";
 
 const colors = {
   neutral: {
@@ -278,7 +278,7 @@ const values = {
     button: {
       default: {
         background: palette.background.primary.default,
-        backgroundHover: palette.backgroundHover.primary.default,
+        backgroundHover: palette.border.neutral.dark,
       },
     },
   },

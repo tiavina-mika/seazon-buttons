@@ -1,7 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { theme } from "../../../styles/theme.css";
 
-export const button = recipe({
+export const buttonVariants = recipe({
   base: {
     borderRadius: 999999,
     color: theme.palette.text.neutral.default,
@@ -12,12 +12,19 @@ export const button = recipe({
     gap: 8,
     display: "flex",
     alignItems: "center",
+    "&:focus, &:focus-within, &:focus-visible": {
+      border: "2px solid " + theme.palette.border.neutral.dark,
+    },
   },
 
   variants: {
     variant: {
       default: {
         backgroundColor: theme.components.button.default.background,
+        "&:hover": {
+          border:
+            "2px solid " + theme.components.button.default.backgroundHover,
+        },
       },
     },
     size: {
@@ -38,19 +45,19 @@ export const button = recipe({
 
   // Applied when multiple variants are set at once
   compoundVariants: [
-    {
-      variants: {
-        color: "neutral",
-        size: "large",
-      },
-      style: {
-        background: "ghostwhite",
-      },
-    },
+    // {
+    //   variants: {
+    //     color: "neutral",
+    //     size: "large",
+    //   },
+    //   style: {
+    //     background: "ghostwhite",
+    //   },
+    // },
   ],
 
   defaultVariants: {
-    color: "accent",
-    size: "medium",
+    variant: "default",
+    size: "md",
   },
 });
