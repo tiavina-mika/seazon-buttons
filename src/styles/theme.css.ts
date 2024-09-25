@@ -277,5 +277,11 @@ export const theme = createThemeContract({
         backgroundHover: null,
       },
     },
+    button: {
+      default: {
+        background: null,
+        backgroundHover: null,
+      },
+    },
   },
 });

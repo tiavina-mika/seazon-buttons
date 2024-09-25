@@ -275,6 +275,12 @@ const values = {
         backgroundHover: palette.background.disabled.default,
       },
     },
+    button: {
+      default: {
+        background: palette.background.primary.default,
+        backgroundHover: palette.backgroundHover.primary.default,
+      },
+    },
   },
 };
 
