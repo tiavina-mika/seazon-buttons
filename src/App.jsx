@@ -4,6 +4,7 @@ import { seazonTheme } from "./styles/seazontheme.css";
 import * as classes from "./app.css";
 
 const variants = ["default", "neutral", "text"];
+const sizes = ["sm", "md", "lg"];
 
 function App() {
   return (
@@ -39,6 +40,22 @@ function App() {
                 variant={variant}
                 key={index}
                 rightIcon={<img alt="" src="/icons/delete.svg" />}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* sizes */}
+        <div>
+          <Title>Sizes</Title>
+          <div>
+            {sizes.map((size, index) => (
+              <Button
+                text="label"
+                variant="default"
+                key={index}
+                rightIcon={<img alt="" src="/icons/delete.svg" />}
+                size={size}
               />
             ))}
           </div>

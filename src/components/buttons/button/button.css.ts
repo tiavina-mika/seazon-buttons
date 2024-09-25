@@ -11,8 +11,9 @@ export const buttonVariants = recipe({
     letterSpacing: 0.3,
     lineHeight: 1,
     gap: 8,
-    display: "flex",
+    display: "inline-flex",
     alignItems: "center",
+    height: "auto",
     "&:focus, &:focus-within, &:focus-visible": {
       border: "2px solid " + theme.palette.border.neutral.dark,
     },
