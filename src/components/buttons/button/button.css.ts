@@ -6,6 +6,7 @@ export const buttonVariants = recipe({
     borderRadius: 999999,
     color: theme.palette.text.neutral.default,
     fontStyle: "normal",
+    border: "2px solid transparent",
     fontWeight: 500,
     letterSpacing: 0.3,
     lineHeight: 1,
@@ -20,7 +21,6 @@ export const buttonVariants = recipe({
   variants: {
     variant: {
       default: {
-        border: "2px solid transparent",
         backgroundColor: theme.components.button.default.background,
         "&:hover": {
           cursor: "pointer",
@@ -29,11 +29,21 @@ export const buttonVariants = recipe({
       },
       neutral: {
         border: "1px solid transparent",
+        paddingLeft: 0,
+        paddingRight: 0,
         backgroundColor: theme.components.button.neutral.background,
         "&:hover": {
           cursor: "pointer",
           border: "1px solid " + theme.components.button.neutral.border,
           backgroundColor: theme.components.button.neutral.backgroundHover,
+        },
+      },
+      text: {
+        textDecoration: "underline",
+        backgroundColor: theme.components.button.text.background,
+        "&:hover": {
+          cursor: "pointer",
+          backgroundColor: theme.components.button.text.backgroundHover,
         },
       },
     },
@@ -55,15 +65,33 @@ export const buttonVariants = recipe({
 
   // Applied when multiple variants are set at once
   compoundVariants: [
-    // {
-    //   variants: {
-    //     color: "neutral",
-    //     size: "large",
-    //   },
-    //   style: {
-    //     background: "ghostwhite",
-    //   },
-    // },
+    {
+      variants: {
+        variant: "text",
+        size: "sm",
+      },
+      style: {
+        padding: "8px 4px",
+      },
+    },
+    {
+      variants: {
+        variant: "text",
+        size: "md",
+      },
+      style: {
+        padding: "12px 8px",
+      },
+    },
+    {
+      variants: {
+        variant: "text",
+        size: "lg",
+      },
+      style: {
+        padding: "16px",
+      },
+    },
   ],
 
   defaultVariants: {

@@ -286,6 +286,11 @@ const values = {
         backgroundHover: palette.backgroundHover.primary.default,
         border: palette.border.neutral.dark,
       },
+      text: {
+        background: "#fff",
+        backgroundHover: palette.backgroundHover.primary.light,
+        border: palette.border.neutral.dark,
+      },
     },
   },
 };

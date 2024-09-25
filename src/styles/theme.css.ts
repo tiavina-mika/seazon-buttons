@@ -288,6 +288,11 @@ export const theme = createThemeContract({
         backgroundHover: null,
         border: null,
       },
+      text: {
+        background: null,
+        backgroundHover: null,
+        border: null,
+      },
     },
   },
 });
