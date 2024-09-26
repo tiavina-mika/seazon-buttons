@@ -14,6 +14,7 @@ export const buttonVariants = recipe({
     display: "inline-flex",
     alignItems: "center",
     height: "auto",
+    fontFamily: 'Neue-Haas-Grotesk-Text-Pro-Roman',
     "&:focus, &:focus-within, &:focus-visible": {
       border: "2px solid " + theme.palette.border.neutral.dark,
     },
