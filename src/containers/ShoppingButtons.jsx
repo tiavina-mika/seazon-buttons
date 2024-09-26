@@ -4,6 +4,7 @@ import * as classes from "./section.css";
 
 const variants = ["default", "neutral"];
 const sizes = ["sm", "md", "lg"];
+const loading = false;
 const value = 1;
 
 const ShoppingShoppingButtons = () => {
@@ -14,7 +15,12 @@ const ShoppingShoppingButtons = () => {
         <Title>No product:</Title>
         <div className={classes.buttons}>
           {variants.map((variant, index) => (
-            <ShoppingButton value={0} variant={variant} key={index} />
+            <ShoppingButton
+              value={0}
+              variant={variant}
+              key={index}
+              loading={loading}
+            />
           ))}
         </div>
       </div>
@@ -23,7 +29,12 @@ const ShoppingShoppingButtons = () => {
         <Title>Variants:</Title>
         <div className={classes.buttons}>
           {variants.map((variant, index) => (
-            <ShoppingButton value={value} variant={variant} key={index} />
+            <ShoppingButton
+              value={value}
+              variant={variant}
+              key={index}
+              loading={loading}
+            />
           ))}
         </div>
       </div>
@@ -52,8 +63,8 @@ const ShoppingShoppingButtons = () => {
               value={value}
               variant="default"
               key={index}
-              rightIcon={<img alt="" src="/icons/delete.svg" />}
               size={size}
+              loading={loading}
             />
           ))}
         </div>

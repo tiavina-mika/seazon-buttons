@@ -12,7 +12,19 @@ export const root = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  gap: 12, // important
+  // gap: 12, // important
+  gap: 6, // important
+});
+
+export const loading = style({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: 24, // important
+});
+
+export const value = style({
+  minWidth: 12, // important
 });
 
 export const buttonVariants = recipe({
@@ -59,7 +71,7 @@ export const buttonVariants = recipe({
         size: "md",
       },
       style: {
-        width: 48,
+        padding: "10px 14px",
       },
     },
     {
@@ -68,7 +80,7 @@ export const buttonVariants = recipe({
         size: "lg",
       },
       style: {
-        width: 72,
+        padding: "10px 14px",
       },
     },
   ],

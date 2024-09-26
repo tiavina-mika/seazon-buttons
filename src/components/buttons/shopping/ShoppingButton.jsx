@@ -20,21 +20,31 @@ const ShoppingButton = ({
         className
       )}
     >
+      {/* minus icon */}
       {value !== 0 && (
-        <>
-          <Icon
-            size="xs"
-            src="/icons/minus-green.svg"
-            ariaLebel="Retirer un produit"
-          />
-          <span>{value}</span>
-        </>
+        <Icon
+          size="xs"
+          src="/icons/minus-green.svg"
+          ariaLebel="Retirer un produit"
+        />
       )}
-      <Icon
-        size="xs"
-        src="/icons/plus-green.svg"
-        ariaLebel="Ajouter un produit"
-      />
+      {/* text */}
+      {value !== 0 && !loading && (
+        <span className={classes.value}>{value}</span>
+      )}
+      {loading && (
+        <div className={classes.loading}>
+          <img alt="" src="/icons/loading.svg" />
+        </div>
+      )}
+      {/* plus icon */}
+      {!(value === 0 && loading) && (
+        <Icon
+          size="xs"
+          src="/icons/plus-green.svg"
+          ariaLebel="Ajouter un produit"
+        />
+      )}
     </div>
   );
 };
