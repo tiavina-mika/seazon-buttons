@@ -14,6 +14,9 @@ const row = style({
 
 export const tabs = style([
   row,
+  {
+    marginBottom: 4
+  }
 ]);
 
 export const tab = style([
