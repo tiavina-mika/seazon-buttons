@@ -13,7 +13,7 @@ export const base = style({
   display: "inline-flex",
   alignItems: "center",
   height: "auto",
-  fontFamily: 'Neue-Haas-Grotesk-Text-Pro-Roman',
+  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
   "&:focus, &:focus-within, &:focus-visible": {
     border: "2px solid " + theme.palette.border.neutral.dark,
   },
@@ -26,25 +26,6 @@ export const variants = {
       "&:hover": {
         cursor: "pointer",
         backgroundColor: theme.components.button.default.backgroundHover,
-      },
-    },
-    neutral: {
-      border: "1px solid transparent",
-      paddingLeft: 0,
-      paddingRight: 0,
-      backgroundColor: theme.components.button.neutral.background,
-      "&:hover": {
-        cursor: "pointer",
-        border: "1px solid " + theme.components.button.neutral.border,
-        backgroundColor: theme.components.button.neutral.backgroundHover,
-      },
-    },
-    text: {
-      textDecoration: "underline",
-      backgroundColor: theme.components.button.text.background,
-      "&:hover": {
-        cursor: "pointer",
-        backgroundColor: theme.components.button.text.backgroundHover,
       },
     },
   },
@@ -119,7 +100,7 @@ export const disabledCompountVariants = [
         backgroundColor: theme.components.button.text.backgroundDisabled,
       },
     },
-  }
+  },
 ];
 
 export const defaultVariants = {
@@ -127,4 +108,4 @@ export const defaultVariants = {
   size: "md",
   disabled: false,
   loading: false,
-}
+};

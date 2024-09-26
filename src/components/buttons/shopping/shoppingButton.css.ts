@@ -1,5 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes";
-// import { theme } from "../../../styles/theme.css";
+import { theme } from "../../../styles/theme.css";
 import { style } from "@vanilla-extract/css";
 import {
   base,
@@ -19,17 +19,31 @@ export const buttonVariants = recipe({
   base,
   variants: {
     ...variants,
+    variant: {
+      ...variants.variant,
+      neutral: {
+        border: "1px solid " + theme.components.button.neutral.border,
+        paddingLeft: 0,
+        paddingRight: 0,
+        backgroundColor: theme.components.button.neutral.background,
+        "&:hover": {
+          cursor: "pointer",
+          border: "1px solid " + theme.components.button.neutral.border,
+          backgroundColor: theme.components.button.neutral.backgroundHover,
+        },
+      },
+    },
     size: {
       sm: {
-        padding: "6px 12px",
+        padding: "6px 8px",
         fontSize: 14,
       },
       md: {
-        padding: "10px 16px",
+        padding: "10px 12px",
         fontSize: 16,
       },
       lg: {
-        padding: "14px 10px",
+        padding: "14px 16px",
         fontSize: 16,
       },
     },

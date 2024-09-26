@@ -10,48 +10,31 @@ const ShoppingButton = ({
   size = "md",
   disabled = false,
   loading = false,
-  value,
+  value = 0,
 }) => {
   return (
     <div
       className={classNames(
         classes.root,
-        // classes.root,
         classes.buttonVariants({ size, variant, disabled, loading }),
-        // classes.sizeVariants[size],
         className
       )}
     >
-      <Icon
-        size="xs"
-        src="/icons/minus-green.svg"
-        ariaLebel="Retirer un produit"
-      />
-      <span>{value}</span>
+      {value !== 0 && (
+        <>
+          <Icon
+            size="xs"
+            src="/icons/minus-green.svg"
+            ariaLebel="Retirer un produit"
+          />
+          <span>{value}</span>
+        </>
+      )}
       <Icon
         size="xs"
         src="/icons/plus-green.svg"
         ariaLebel="Ajouter un produit"
       />
-      {/* <button
-        className={classNames(
-          // classes.root,
-          buttonVariants({ size, variant, disabled, loading }),
-          // classes.sizeVariants[size],
-          className
-        )}
-      >
-        {loading
-          ? (
-            <img alt="" src="/icons/loading.svg" />
-          ) : (
-            <>
-              {text}
-              {rightIcon}
-            </>
-          )
-        }
-      </> */}
     </div>
   );
 };

@@ -4,16 +4,26 @@ import * as classes from "./section.css";
 
 const variants = ["default", "neutral"];
 const sizes = ["sm", "md", "lg"];
+const value = 1;
 
 const ShoppingShoppingButtons = () => {
   return (
     <div className={classes.root}>
       {/* normal */}
       <div className={classes.section}>
+        <Title>No product:</Title>
+        <div className={classes.buttons}>
+          {variants.map((variant, index) => (
+            <ShoppingButton value={0} variant={variant} key={index} />
+          ))}
+        </div>
+      </div>
+      {/* normal */}
+      <div className={classes.section}>
         <Title>Variants:</Title>
         <div className={classes.buttons}>
           {variants.map((variant, index) => (
-            <ShoppingButton value={1} variant={variant} key={index} />
+            <ShoppingButton value={value} variant={variant} key={index} />
           ))}
         </div>
       </div>
@@ -23,7 +33,12 @@ const ShoppingShoppingButtons = () => {
         <Title>Disabled:</Title>
         <div className={classes.buttons}>
           {variants.map((variant, index) => (
-            <ShoppingButton variant={variant} key={index} disabled value={1} />
+            <ShoppingButton
+              variant={variant}
+              key={index}
+              disabled
+              value={value}
+            />
           ))}
         </div>
       </div>
@@ -34,7 +49,7 @@ const ShoppingShoppingButtons = () => {
         <div className={classes.buttons}>
           {sizes.map((size, index) => (
             <ShoppingButton
-              value={1}
+              value={value}
               variant="default"
               key={index}
               rightIcon={<img alt="" src="/icons/delete.svg" />}
@@ -50,7 +65,7 @@ const ShoppingShoppingButtons = () => {
         <div className={classes.buttons}>
           {sizes.map((size, index) => (
             <ShoppingButton
-              value={1}
+              value={value}
               variant="default"
               key={index}
               // rightIcon={<img alt="" src="/icons/delete.svg" />}
