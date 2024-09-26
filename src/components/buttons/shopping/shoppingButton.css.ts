@@ -12,7 +12,7 @@ export const root = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  gap: 8,
+  gap: 12, // important
 });
 
 export const buttonVariants = recipe({
@@ -25,11 +25,11 @@ export const buttonVariants = recipe({
         fontSize: 14,
       },
       md: {
-        padding: "10px 24px",
+        padding: "10px 16px",
         fontSize: 16,
       },
       lg: {
-        padding: "14px 24px",
+        padding: "14px 10px",
         fontSize: 16,
       },
     },
