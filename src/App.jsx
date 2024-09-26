@@ -12,19 +12,19 @@ function App() {
     <div className={seazonTheme}>
       <div className={classes.root}>
         {/* normal */}
-        {/* <div>
-          <Title>Normal</Title>
-          <div className={classes.row}>
+        <div className={classes.section}>
+          <Title>Variants:</Title>
+          <div className={classes.buttons}>
             {variants.map((variant, index) => (
               <Button text="Label" variant={variant} key={index} />
             ))}
           </div>
-        </div> */}
+        </div>
 
         {/* disabled */}
-        <div>
-          <Title>Disabled</Title>
-          <div className={classes.row}>
+        <div className={classes.section}>
+          <Title>Disabled:</Title>
+          <div className={classes.buttons}>
             {variants.map((variant, index) => (
               <Button text="Label" variant={variant} key={index} disabled />
             ))}
@@ -32,9 +32,9 @@ function App() {
         </div>
 
         {/* right icon */}
-        <div>
-          <Title>With right icon</Title>
-          <div className={classes.row}>
+        <div className={classes.section}>
+          <Title>With right icon:</Title>
+          <div className={classes.buttons}>
             {variants.map((variant, index) => (
               <Button
                 text="Label"
@@ -47,9 +47,9 @@ function App() {
         </div>
 
         {/* sizes */}
-        <div>
-          <Title>Sizes</Title>
-          <div className={classes.row}>
+        <div className={classes.section}>
+          <Title>Sizes:</Title>
+          <div className={classes.buttons}>
             {sizes.map((size, index) => (
               <Button
                 text="Label"
@@ -62,10 +62,10 @@ function App() {
           </div>
         </div>
 
-        {/* sizes */}
-        <div>
-          <Title>Loading with sizes</Title>
-          <div className={classes.row}>
+        {/* sizes with loading */}
+        <div className={classes.section}>
+          <Title>Loading with sizes:</Title>
+          <div className={classes.buttons}>
             {sizes.map((size, index) => (
               <Button
                 text="Label"

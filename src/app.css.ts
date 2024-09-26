@@ -6,7 +6,17 @@ export const root = style({
   gap: 3,
 });
 
-export const row = style({
+const row = style({
   display: "flex",
-  gap: 4,
+  alignItems: 'center',
 });
+
+export const buttons = style([
+  row,
+  { gap: 8 },
+]);
+
+export const section = style([
+  row,
+  { gap: 22 },
+]);
