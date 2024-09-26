@@ -22,6 +22,8 @@ const ShoppingShoppingButtons = () => {
               loading={loading}
             />
           ))}
+          <ShoppingButton value={0} loading={loading} size="sm" />
+          <ShoppingButton value={0} loading={loading} size="lg" />
         </div>
       </div>
       {/* normal */}

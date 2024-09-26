@@ -47,11 +47,11 @@ export const buttonVariants = recipe({
     },
     size: {
       sm: {
-        padding: "6px 8px",
+        padding: "6px 7px",
         fontSize: 14,
       },
       md: {
-        padding: "10px 12px",
+        padding: "10px 11px",
         fontSize: 16,
       },
       lg: {
