@@ -16,7 +16,7 @@ function App() {
           <Title>Normal</Title>
           <div className={classes.row}>
             {variants.map((variant, index) => (
-              <Button text="label" variant={variant} key={index} />
+              <Button text="Label" variant={variant} key={index} />
             ))}
           </div>
         </div> */}
@@ -26,7 +26,7 @@ function App() {
           <Title>Disabled</Title>
           <div className={classes.row}>
             {variants.map((variant, index) => (
-              <Button text="label" variant={variant} key={index} disabled />
+              <Button text="Label" variant={variant} key={index} disabled />
             ))}
           </div>
         </div>
@@ -37,7 +37,7 @@ function App() {
           <div className={classes.row}>
             {variants.map((variant, index) => (
               <Button
-                text="label"
+                text="Label"
                 variant={variant}
                 key={index}
                 rightIcon={<img alt="" src="/icons/delete.svg" />}
@@ -52,7 +52,7 @@ function App() {
           <div className={classes.row}>
             {sizes.map((size, index) => (
               <Button
-                text="label"
+                text="Label"
                 variant="default"
                 key={index}
                 rightIcon={<img alt="" src="/icons/delete.svg" />}
@@ -68,7 +68,7 @@ function App() {
           <div className={classes.row}>
             {sizes.map((size, index) => (
               <Button
-                text="label"
+                text="Label"
                 variant="default"
                 key={index}
                 // rightIcon={<img alt="" src="/icons/delete.svg" />}
