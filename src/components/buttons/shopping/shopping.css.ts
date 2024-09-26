@@ -2,6 +2,10 @@ import { recipe } from "@vanilla-extract/recipes";
 import { theme } from "../../../styles/theme.css";
 import { base } from "../buttonBase.css";
 
+export const root = style({
+  display: 'flex'
+});
+
 export const buttonVariants = recipe({
   base,
   variants: {
