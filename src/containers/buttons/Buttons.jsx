@@ -1,6 +1,6 @@
 import Button from "../../components/buttons/button/Button";
 import Title from "../../components/title/Title";
-import * as classes from "./buttons.css";
+import * as classes from "../section.css";
 
 const variants = ["default", "neutral", "text"];
 const sizes = ["sm", "md", "lg"];
