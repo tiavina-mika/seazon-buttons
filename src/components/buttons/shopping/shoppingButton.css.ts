@@ -1,9 +1,12 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { theme } from "../../../styles/theme.css";
 import { base } from "../buttonBase.css";
+import { style } from "@vanilla-extract/css";
 
 export const root = style({
-  display: 'flex'
+  display: "flex",
+  alignItems: "center",
+  gap: 8,
 });
 
 export const buttonVariants = recipe({
@@ -48,24 +51,24 @@ export const buttonVariants = recipe({
     loading: {
       true: {
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
       },
     },
     size: {
       sm: {
         padding: "8px 12px",
         fontSize: 14,
-        height: 32
+        height: 32,
       },
       md: {
         padding: "12px 24px",
         fontSize: 16,
-        height: 40
+        height: 40,
       },
       lg: {
         padding: "16px 24px",
         fontSize: 16,
-        height: 48
+        height: 48,
       },
     },
   },

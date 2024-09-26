@@ -3,12 +3,13 @@ import classNames from "classnames";
 import Buttons from "./containers/buttons/Buttons";
 import { seazonTheme } from "./styles/seazontheme.css";
 import * as classes from "./app.css";
-import './index.css';
+import "./index.css";
+import ShoppingButtons from "./containers/ShoppingButtons";
 
-const tabs = ['buttons', 'icons'];
+const tabs = ["buttons", "shopping"];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(1);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -19,7 +20,10 @@ const App = () => {
           {tabs.map((tab, index) => (
             <button
               key={index}
-              className={classNames(classes.tab, selectedTab === index ? classes.activeTab: null)}
+              className={classNames(
+                classes.tab,
+                selectedTab === index ? classes.activeTab : null
+              )}
               onClick={() => handleTabChange(index)}
             >
               {tab}
@@ -29,9 +33,10 @@ const App = () => {
       </div>
       <div>
         {selectedTab === 0 && <Buttons />}
+        {selectedTab === 1 && <ShoppingButtons />}
       </div>
     </div>
   );
-}
+};
 
 export default App;

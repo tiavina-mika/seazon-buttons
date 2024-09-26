@@ -1,32 +1,35 @@
 import React from "react";
 import classNames from "classnames";
-import { buttonVariants } from "../button.css";
-import { buttonVariants } from "./shopping.css";
+import Icon from "../../icons/icon/Icon";
+import { buttonVariants } from "../button/button.css";
+import * as classes from "./shoppingButton.css";
 
-const Shopping = ({
+const ShoppingButton = ({
   variant = "default",
   className,
   size = "md",
   disabled = false,
   loading = false,
-  value
+  value,
 }) => {
   return (
-    <div className={classNames(
-      // classes.root,
-      buttonVariants({ size, variant, disabled, loading }),
-      // classes.sizeVariants[size],
-      className
-    )}
+    <div
+      className={classNames(
+        classes.root,
+        // classes.root,
+        buttonVariants({ size, variant, disabled, loading }),
+        // classes.sizeVariants[size],
+        className
+      )}
     >
       <Icon
-        size={size}
+        size="xs"
         src="/icons/minus-green.svg"
         ariaLebel="Retirer un produit"
       />
       {value}
       <Icon
-        size={size}
+        size="xs"
         src="/icons/plus-green.svg"
         ariaLebel="Ajouter un produit"
       />
@@ -53,4 +56,4 @@ const Shopping = ({
   );
 };
 
-export default Shopping;
+export default ShoppingButton;

@@ -18,3 +18,42 @@ export const base = style({
     border: "2px solid " + theme.palette.border.neutral.dark,
   },
 });
+
+export const defaultVariants = {
+  variant: {
+    default: {
+      backgroundColor: theme.components.button.default.background,
+      "&:hover": {
+        cursor: "pointer",
+        backgroundColor: theme.components.button.default.backgroundHover,
+      },
+    },
+    neutral: {
+      border: "1px solid transparent",
+      paddingLeft: 0,
+      paddingRight: 0,
+      backgroundColor: theme.components.button.neutral.background,
+      "&:hover": {
+        cursor: "pointer",
+        border: "1px solid " + theme.components.button.neutral.border,
+        backgroundColor: theme.components.button.neutral.backgroundHover,
+      },
+    },
+    text: {
+      textDecoration: "underline",
+      backgroundColor: theme.components.button.text.background,
+      "&:hover": {
+        cursor: "pointer",
+        backgroundColor: theme.components.button.text.backgroundHover,
+      },
+    },
+  },
+  disabled: {
+    true: {
+      color: theme.palette.text.disabled.light,
+      "&:hover": {
+        cursor: "none",
+      },
+    },
+  },
+}
