@@ -56,6 +56,12 @@ export const buttonVariants = recipe({
         },
       },
     },
+    loading: {
+      true: {
+        justifyContent: "center",
+        alignItems: "center"
+      },
+    },
     size: {
       sm: {
         padding: "8px 12px",
@@ -77,6 +83,7 @@ export const buttonVariants = recipe({
 
   // Applied when multiple variants are set at once
   compoundVariants: [
+    // size variants with text
     {
       variants: {
         variant: "text",
@@ -104,7 +111,7 @@ export const buttonVariants = recipe({
         padding: "16px",
       },
     },
-    // disabled
+    // disabled state with different variant
     {
       variants: {
         variant: "default",
@@ -143,11 +150,31 @@ export const buttonVariants = recipe({
         },
       },
     },
+    // loading state with different variants
+    {
+      variants: {
+        loading: true,
+        size: "md",
+      },
+      style: {
+        width: 48,
+      },
+    },
+    {
+      variants: {
+        loading: true,
+        size: "lg",
+      },
+      style: {
+        width: 72,
+      },
+    },
   ],
 
   defaultVariants: {
     variant: "default",
     size: "md",
     disabled: false,
+    loading: false,
   },
 });
