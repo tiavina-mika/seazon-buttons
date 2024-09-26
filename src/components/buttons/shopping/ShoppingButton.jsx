@@ -27,7 +27,7 @@ const ShoppingButton = ({
         src="/icons/minus-green.svg"
         ariaLebel="Retirer un produit"
       />
-      {value}
+      <span>{value}</span>
       <Icon
         size="xs"
         src="/icons/plus-green.svg"
