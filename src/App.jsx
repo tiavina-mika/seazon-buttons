@@ -9,7 +9,6 @@ const tabs = ['buttons', 'icons'];
 
 const App = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-  console.log('selectedTab', selectedTab)
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -29,7 +28,7 @@ const App = () => {
         </div>
       </div>
       <div>
-        <Buttons />
+        {selectedTab === 0 && <Buttons />}
       </div>
     </div>
   );

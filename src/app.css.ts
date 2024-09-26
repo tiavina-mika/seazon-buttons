@@ -24,7 +24,8 @@ export const tab = style([
     border: 'none',
     background: 'none',
     padding: '8px 18px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    borderBottom: '2px solid transparent',
   },
 ]);
 
