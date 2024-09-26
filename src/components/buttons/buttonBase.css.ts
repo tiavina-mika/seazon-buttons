@@ -19,7 +19,7 @@ export const base = style({
   },
 });
 
-export const defaultVariants = {
+export const variants = {
   variant: {
     default: {
       backgroundColor: theme.components.button.default.background,
@@ -56,4 +56,75 @@ export const defaultVariants = {
       },
     },
   },
+  loading: {
+    true: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+  size: {
+    sm: {
+      padding: "6px 12px",
+      fontSize: 14,
+      // height: 32,
+    },
+    md: {
+      padding: "10px 24px",
+      fontSize: 16,
+      // height: 40,
+    },
+    lg: {
+      padding: "14px 24px",
+      fontSize: 16,
+      // height: 48,
+    },
+  },
+};
+
+export const disabledCompountVariants = [
+  {
+    variants: {
+      variant: "default",
+      disabled: true,
+    },
+    style: {
+      backgroundColor: theme.components.button.default.backgroundDisabled,
+      "&:hover": {
+        backgroundColor: theme.components.button.default.backgroundDisabled,
+      },
+    },
+  },
+  {
+    variants: {
+      variant: "neutral",
+      disabled: true,
+    },
+    style: {
+      backgroundColor: theme.components.button.neutral.backgroundDisabled,
+      borderColor: theme.palette.border.disabled.default,
+      "&:hover": {
+        backgroundColor: theme.components.button.neutral.backgroundDisabled,
+        borderColor: theme.palette.border.disabled.default,
+      },
+    },
+  },
+  {
+    variants: {
+      variant: "text",
+      disabled: true,
+    },
+    style: {
+      backgroundColor: theme.components.button.text.backgroundDisabled,
+      "&:hover": {
+        backgroundColor: theme.components.button.text.backgroundDisabled,
+      },
+    },
+  }
+];
+
+export const defaultVariants = {
+  variant: "default",
+  size: "md",
+  disabled: false,
+  loading: false,
 }
