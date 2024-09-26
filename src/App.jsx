@@ -2,6 +2,7 @@ import Button from "./components/buttons/button/Button";
 import Title from "./components/title/Title";
 import { seazonTheme } from "./styles/seazontheme.css";
 import * as classes from "./app.css";
+import './index.css';
 
 const variants = ["default", "neutral", "text"];
 const sizes = ["sm", "md", "lg"];
