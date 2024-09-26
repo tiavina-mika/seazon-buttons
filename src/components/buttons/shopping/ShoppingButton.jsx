@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Icon from "../../icons/icon/Icon";
-import { buttonVariants } from "../button/button.css";
+// import { buttonVariants } from "../button/button.css";
 import * as classes from "./shoppingButton.css";
 
 const ShoppingButton = ({
@@ -17,7 +17,7 @@ const ShoppingButton = ({
       className={classNames(
         classes.root,
         // classes.root,
-        buttonVariants({ size, variant, disabled, loading }),
+        classes.buttonVariants({ size, variant, disabled, loading }),
         // classes.sizeVariants[size],
         className
       )}

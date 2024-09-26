@@ -17,7 +17,23 @@ export const root = style({
 
 export const buttonVariants = recipe({
   base,
-  variants,
+  variants: {
+    ...variants,
+    size: {
+      sm: {
+        padding: "6px 12px",
+        fontSize: 14,
+      },
+      md: {
+        padding: "10px 24px",
+        fontSize: 16,
+      },
+      lg: {
+        padding: "14px 24px",
+        fontSize: 16,
+      },
+    },
+  },
 
   // Applied when multiple variants are set at once
   compoundVariants: [
