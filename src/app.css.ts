@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { theme } from "./styles/theme.css";
 
 export const root = style({
   display: "flex",
@@ -11,12 +12,24 @@ const row = style({
   alignItems: 'center',
 });
 
-export const buttons = style([
+export const tabs = style([
   row,
-  { gap: 8 },
 ]);
 
-export const section = style([
+export const tab = style([
   row,
-  { gap: 22 },
+  {
+    fontFamily: 'Neue-Haas-Grotesk-Text-Pro-Roman',
+    textTransform: 'capitalize',
+    border: 'none',
+    background: 'none',
+    padding: '8px 18px',
+    cursor: 'pointer'
+  },
 ]);
+
+export const activeTab = style({
+  borderBottom: '2px solid ' + theme.palette.background.secondary.dark,
+  color: theme.palette.background.secondary.dark,
+  fontWeight: 600
+});
