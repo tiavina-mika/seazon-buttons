@@ -8,75 +8,66 @@ const value = 100;
 const ProgressBarButtons = () => {
   return (
     <div className={classes.root}>
+      {/* 25% */}
       <div className={classes.section}>
-        <Title>Eled:</Title>
+        <Title>In progress (25%):</Title>
         <div className={classes.buttons}>
           <ProgressBarButton
             text="Label"
-            loading={loading}
-            value={value}
-            onClick={() => console.log("cooo")}
+            value={25}
+            onClick={() => console.log("clicked")}
           />
         </div>
       </div>
-      {/* <div className={classes.section}>
-        <Title>Variants:</Title>
+
+      {/* 50% */}
+      <div className={classes.section}>
+        <Title>In progress (50%):</Title>
         <div className={classes.buttons}>
-          {variants.map((variant, index) => (
-            <ShoppingButton
-              value={value}
-              variant={variant}
-              key={index}
-              loading={loading}
-            />
-          ))}
+          <ProgressBarButton
+            text="Label"
+            value={50}
+            onClick={() => console.log("clicked")}
+          />
         </div>
       </div>
 
+      {/* 75% */}
       <div className={classes.section}>
-        <Title>Disabled:</Title>
+        <Title>In progress (75%):</Title>
         <div className={classes.buttons}>
-          {variants.map((variant, index) => (
-            <ShoppingButton
-              variant={variant}
-              key={index}
-              disabled
-              value={value}
-            />
-          ))}
+          <ProgressBarButton
+            text="Label"
+            value={70}
+            onClick={() => console.log("clicked")}
+          />
         </div>
       </div>
 
+      {/* 100% */}
       <div className={classes.section}>
-        <Title>Sizes:</Title>
+        <Title>Complete (100%):</Title>
         <div className={classes.buttons}>
-          {sizes.map((size, index) => (
-            <ShoppingButton
-              value={value}
-              variant="default"
-              key={index}
-              size={size}
-              loading={loading}
-            />
-          ))}
+          <ProgressBarButton
+            text="Label"
+            value={100}
+            onClick={() => console.log("clicked")}
+          />
         </div>
       </div>
 
+      {/* loading */}
       <div className={classes.section}>
-        <Title>Loading with sizes:</Title>
+        <Title>Complete (100%):</Title>
         <div className={classes.buttons}>
-          {sizes.map((size, index) => (
-            <ShoppingButton
-              value={value}
-              variant="default"
-              key={index}
-              // rightIcon={<img alt="" src="/icons/delete.svg" />}
-              loading
-              size={size}
-            />
-          ))}
+          <ProgressBarButton
+            text="Label"
+            value={100}
+            loading
+            onClick={() => console.log("clicked")}
+          />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

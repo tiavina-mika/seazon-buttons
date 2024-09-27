@@ -13,7 +13,7 @@ export const base = style({
   display: "inline-flex",
   alignItems: "center",
   height: "auto",
-  fontFamily: theme.fonts.body.regular,
+  fontFamily: "theme.fonts.body.regular",
   "&:focus, &:focus-within, &:focus-visible": {
     border: "2px solid " + theme.palette.border.neutral.dark,
   },
