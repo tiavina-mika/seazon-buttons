@@ -11,7 +11,7 @@ const ProgressBarButtons = () => {
       <div className={classes.section}>
         <Title>Eled:</Title>
         <div className={classes.buttons}>
-          <ProgressBarButton text="Label" loading={loading} value={100} />
+          <ProgressBarButton text="Label" loading={loading} value={24} />
         </div>
       </div>
       {/* <div className={classes.section}>

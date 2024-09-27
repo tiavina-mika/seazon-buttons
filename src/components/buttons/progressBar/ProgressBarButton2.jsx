@@ -8,6 +8,7 @@ const ProgressBarButton = ({
   disabled = false,
   loading = false,
   value = 0,
+  onClick,
 }) => {
   return (
     // <button
@@ -29,7 +30,13 @@ const ProgressBarButton = ({
         {loading ? "Loading..." : "Click Me"}
       </button> */}
       {/* xxx */}
-      <div className={classes.progressBarContainer}>
+      <button
+        className={classNames(
+          classes.button,
+          { [classes.buttonEnabled]: value >= 100 }
+        )}
+        onClick={onClick}
+      >
         <div
           className={classes.progressBar}
           // style={{ width: `${progress}%` }}
@@ -43,7 +50,7 @@ const ProgressBarButton = ({
         >
           <span>{text}</span>
         </div>
-      </div>
+      </button>
     </div>
   );
 };

@@ -8,23 +8,23 @@
 import { style } from "@vanilla-extract/css";
 import { theme } from "../../../styles/theme.css";
 
-export const button = style({
-  // borderRadius: 999999,
-  color: theme.palette.text.neutral.default,
-  fontStyle: "normal",
-  // border: "2px solid transparent",
-  // width: 368,
-  // height: 48,
-  fontWeight: 500,
-  letterSpacing: 0.3,
-  lineHeight: 1,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  cursor: "pointer",
-  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
-});
+// export const button = style({
+//   // borderRadius: 999999,
+//   color: theme.palette.text.neutral.default,
+//   fontStyle: "normal",
+//   // border: "2px solid transparent",
+//   // width: 368,
+//   // height: 48,
+//   fontWeight: 500,
+//   letterSpacing: 0.3,
+//   lineHeight: 1,
+//   display: "flex",
+//   flexDirection: "column",
+//   alignItems: "center",
+//   justifyContent: "center",
+//   cursor: "pointer",
+//   fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
+// });
 
 export const buttonContainer = style({
   display: "flex",
@@ -49,9 +49,7 @@ export const buttonContainer = style({
 //   },
 // });
 
-export const progressBarContainer = style({
-  // width: "100%",
-  // height: "10px",
+export const button = style({
   borderRadius: 999999,
   alignSelf: "stretch",
   flex: 1,
@@ -59,6 +57,19 @@ export const progressBarContainer = style({
   backgroundColor: theme.palette.background.primary.dark,
   overflow: "hidden",
   position: "relative",
+  border: "none",
+  padding: 0,
+
+  // Text
+  fontWeight: 500,
+  letterSpacing: 0.3,
+  lineHeight: 1,
+  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
+  fontSize: 16,
+});
+
+export const buttonEnabled = style({
+  cursor: "pointer",
 });
 
 export const progressBar = style({
