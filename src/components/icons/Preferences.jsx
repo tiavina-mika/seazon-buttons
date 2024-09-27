@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import Icon from "./icon/Icon";
 import PropTypes from "prop-types";
 
 const Preferences = ({ onClick, size, isNotification = false }) => {

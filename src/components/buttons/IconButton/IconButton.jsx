@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import * as classes from "./iconButton.css";
+import * as classes from "./iconButton2.css";
 
 const IconButton = ({
   variant = "default",
@@ -12,7 +12,7 @@ const IconButton = ({
     <button
       className={classNames(
         // classes.root,
-        classes.buttonVariants({ variant, disabled }),
+        classes.iconButtonVariants({ variant, disabled }),
         // classes.sizeVariants[size],
         className
       )}

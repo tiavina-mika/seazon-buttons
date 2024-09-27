@@ -1,35 +1,38 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { theme } from "../../../styles/theme.css";
+import { disabledCompountVariants } from "../buttonBase.css";
 
-export const buttonVariants = recipe({
+export const iconButtonVariants = recipe({
   base: {
-    borderRadius: 6,
+    borderRadius: "50%",
+    height: 48,
+    width: 48,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    border: "none",
+    cursor: "pointer",
   },
-
   variants: {
     variant: {
       default: {
         backgroundColor: theme.components.button.default.background,
+        "&:focus, &:focus-within, &:focus-visible": {
+          border: "2px solid " + theme.palette.border.neutral.dark,
+        },
         "&:hover": {
-          cursor: "pointer",
           backgroundColor: theme.components.button.default.backgroundHover,
         },
       },
       neutral: {
-        border: "1px solid transparent",
-        paddingLeft: 0,
-        paddingRight: 0,
         backgroundColor: theme.components.button.neutral.background,
         "&:hover": {
-          cursor: "pointer",
-          border: "1px solid " + theme.components.button.neutral.border,
-          backgroundColor: theme.components.button.neutral.backgroundHover,
+          backgroundColor: theme.components.button.text.backgroundHover,
         },
       },
     },
     disabled: {
       true: {
-        color: theme.palette.text.disabled.light,
         "&:hover": {
           cursor: "none",
         },
@@ -38,7 +41,8 @@ export const buttonVariants = recipe({
   },
 
   // Applied when multiple variants are set at once
-  // compoundVariants: [
+  compoundVariants: disabledCompountVariants,
+  // [
   //   {
   //     variants: {
   //       color: "neutral",
