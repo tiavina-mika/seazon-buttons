@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import Icon from "../../icons/icon/Icon";
-// import { buttonVariants } from "../button/button.css";
 import * as classes from "./shoppingButton.css";
 
 const ShoppingButton = ({

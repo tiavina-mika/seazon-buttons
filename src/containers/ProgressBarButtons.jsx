@@ -1,8 +1,7 @@
-import ProgressBarButton from "../components/buttons/shopping/ProgressBarButton";
+import ProgressBarButton from "../components/buttons/progressBar/ProgressBarButton2";
 import Title from "../components/title/Title";
 import * as classes from "./section.css";
 
-const variants = ["default", "neutral"];
 const loading = false;
 const value = 1;
 
@@ -10,16 +9,9 @@ const ProgressBarButtons = () => {
   return (
     <div className={classes.root}>
       <div className={classes.section}>
-        <Title>No product:</Title>
+        <Title>Eled:</Title>
         <div className={classes.buttons}>
-          {variants.map((variant, index) => (
-            <ProgressBarButton
-              value={0}
-              variant={variant}
-              key={index}
-              loading={loading}
-            />
-          ))}
+          <ProgressBarButton text="Label" loading={loading} value={100} />
         </div>
       </div>
       {/* <div className={classes.section}>

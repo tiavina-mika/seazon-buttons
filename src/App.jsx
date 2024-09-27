@@ -3,13 +3,14 @@ import classNames from "classnames";
 import Buttons from "./containers/buttons/Buttons";
 import { seazonTheme } from "./styles/seazontheme.css";
 import * as classes from "./app.css";
-import "./index.css";
 import ShoppingButtons from "./containers/ShoppingButtons";
+import ProgressBarButtons from "./containers/ProgressBarButtons";
+import "./index.css";
 
-const tabs = ["buttons", "shopping"];
+const tabs = ["buttons", "shopping", "progress bar"];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(1);
+  const [selectedTab, setSelectedTab] = useState(2);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -34,6 +35,7 @@ const App = () => {
       <div>
         {selectedTab === 0 && <Buttons />}
         {selectedTab === 1 && <ShoppingButtons />}
+        {selectedTab === 2 && <ProgressBarButtons />}
       </div>
     </div>
   );

@@ -159,8 +159,8 @@ const textColor = {
     dark: colors.orange[900],
   },
   disabled: {
-    light: colors.neutral[500],
-    default: colors.neutral[600],
+    light: colors.neutral[400],
+    default: colors.neutral[500],
   },
 };
 
