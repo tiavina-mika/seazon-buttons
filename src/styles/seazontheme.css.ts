@@ -225,6 +225,18 @@ const shadows = {
   500: "0px 10px 40px 0px rgba(7, 57, 62, 0.15)",
 };
 
+const fonts = {
+  title: {
+    regular: null,
+    bold: null,
+    regularItalic: null,
+  },
+  body: {
+    bold: null,
+    regular: null
+  }
+};
+
 const values = {
   colors,
   palette,

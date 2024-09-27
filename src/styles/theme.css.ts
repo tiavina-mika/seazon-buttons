@@ -217,6 +217,18 @@ const shadows = {
   500: null,
 };
 
+const fonts = {
+  title: {
+    regular: "NNSwinton-Regular",
+    bold: "NNSwinton-Bold",
+    regularItalic: "NNSwinton-RegularItalic",
+  },
+  body: {
+    bold: "Neue-Haas-Grotesk-Text-Pro-Bold",
+    regular: "Neue-Haas-Grotesk-Text-Pro-Roman",
+  },
+};
+
 /**
  * use the contract in each style instead of the theme itself
  * @example style({ color: theme.colors.primary.default })
@@ -231,6 +243,7 @@ export const theme = createThemeContract({
     icon: iconColor,
   },
   shadows,
+  fonts,
   components: {
     tag: {
       default: {
