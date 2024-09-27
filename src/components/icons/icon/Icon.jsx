@@ -1,5 +1,5 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 import * as classes from "./icon.css";
 
 const Icon = ({
@@ -21,21 +21,20 @@ const Icon = ({
   /**
    * size of the icon (xs, sm, md)
    */
-  size = 'md'
+  size = "md",
 }) => {
-
   const props = ariaLabel
-    ? { 'aria-label': ariaLabel, role: 'button', 'aria-pressed' :false }
-    : { 'aria-hidden': true };
+    ? { "aria-label": ariaLabel, role: "button", "aria-pressed": false }
+    : { "aria-hidden": true };
 
   return (
     <img
-      src={name ? `/pictures/icons/${name}.svg` : src}
+      src={name ? `/icons/${name}.svg` : src}
       alt={alt}
       className={classNames(
         classes.icon,
         { [classes.iconButton]: !!onClick && !!ariaLabel },
-        classes.sizeVariants[size],
+        classes.sizeVariants[size]
       )}
       onClick={onClick}
       {...props}

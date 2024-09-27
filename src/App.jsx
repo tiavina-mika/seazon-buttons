@@ -6,11 +6,12 @@ import * as classes from "./app.css";
 import ShoppingButtons from "./containers/ShoppingButtons";
 import ProgressBarButtons from "./containers/ProgressBarButtons";
 import "./index.css";
+import IconButtons from "./containers/IconButtons";
 
-const tabs = ["buttons", "shopping", "progress bar"];
+const tabs = ["buttons", "shopping", "progress bar", "icon button"];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(2);
+  const [selectedTab, setSelectedTab] = useState(3);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -36,6 +37,7 @@ const App = () => {
         {selectedTab === 0 && <Buttons />}
         {selectedTab === 1 && <ShoppingButtons />}
         {selectedTab === 2 && <ProgressBarButtons />}
+        {selectedTab === 3 && <IconButtons />}
       </div>
     </div>
   );
