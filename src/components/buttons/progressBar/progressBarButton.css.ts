@@ -64,7 +64,7 @@ export const button = style({
   fontWeight: 500,
   letterSpacing: 0.3,
   lineHeight: 1,
-  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
+  fontFamily: theme.fonts.body.regular,
   fontSize: 16,
 });
 
@@ -84,7 +84,7 @@ export const text = style({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
+  fontFamily: theme.fonts.body.regular,
 });
 
 export const textDisabled = style({
@@ -92,5 +92,5 @@ export const textDisabled = style({
 });
 
 export const textEnabled = style({
-  color: "theme.palette.text.neutral.default",
+  color: theme.palette.text.neutral.default,
 });

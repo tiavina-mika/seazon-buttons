@@ -233,14 +233,15 @@ const fonts = {
   },
   body: {
     bold: null,
-    regular: null
-  }
+    regular: null,
+  },
 };
 
 const values = {
   colors,
   palette,
   shadows,
+  fonts,
   components: {
     tag: {
       default: {
