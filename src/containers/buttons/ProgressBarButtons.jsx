@@ -1,33 +1,28 @@
-import ShoppingButton from "../components/buttons/shopping/ShoppingButton";
+import ProgressBarButton from "../components/buttons/shopping/ProgressBarButton";
 import Title from "../components/title/Title";
 import * as classes from "./section.css";
 
 const variants = ["default", "neutral"];
-const sizes = ["sm", "md", "lg"];
 const loading = false;
 const value = 1;
 
-const ShoppingButtons = () => {
+const ProgressBarButtons = () => {
   return (
     <div className={classes.root}>
-      {/* normal */}
       <div className={classes.section}>
         <Title>No product:</Title>
         <div className={classes.buttons}>
           {variants.map((variant, index) => (
-            <ShoppingButton
+            <ProgressBarButton
               value={0}
               variant={variant}
               key={index}
               loading={loading}
             />
           ))}
-          <ShoppingButton value={0} loading={loading} size="sm" />
-          <ShoppingButton value={0} loading={loading} size="lg" />
         </div>
       </div>
-      {/* normal */}
-      <div className={classes.section}>
+      {/* <div className={classes.section}>
         <Title>Variants:</Title>
         <div className={classes.buttons}>
           {variants.map((variant, index) => (
@@ -41,7 +36,6 @@ const ShoppingButtons = () => {
         </div>
       </div>
 
-      {/* disabled */}
       <div className={classes.section}>
         <Title>Disabled:</Title>
         <div className={classes.buttons}>
@@ -56,7 +50,6 @@ const ShoppingButtons = () => {
         </div>
       </div>
 
-      {/* sizes */}
       <div className={classes.section}>
         <Title>Sizes:</Title>
         <div className={classes.buttons}>
@@ -72,7 +65,6 @@ const ShoppingButtons = () => {
         </div>
       </div>
 
-      {/* sizes with loading */}
       <div className={classes.section}>
         <Title>Loading with sizes:</Title>
         <div className={classes.buttons}>
@@ -87,9 +79,9 @@ const ShoppingButtons = () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default ShoppingButtons;
+export default ProgressBarButtons;
