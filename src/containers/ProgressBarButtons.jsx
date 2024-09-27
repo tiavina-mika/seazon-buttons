@@ -2,8 +2,8 @@ import ProgressBarButton from "../components/buttons/progressBar/ProgressBarButt
 import Title from "../components/title/Title";
 import * as classes from "./section.css";
 
-const loading = false;
-const value = 1;
+const loading = true;
+const value = 100;
 
 const ProgressBarButtons = () => {
   return (
@@ -11,7 +11,12 @@ const ProgressBarButtons = () => {
       <div className={classes.section}>
         <Title>Eled:</Title>
         <div className={classes.buttons}>
-          <ProgressBarButton text="Label" loading={loading} value={24} />
+          <ProgressBarButton
+            text="Label"
+            loading={loading}
+            value={value}
+            onClick={() => console.log("cooo")}
+          />
         </div>
       </div>
       {/* <div className={classes.section}>
