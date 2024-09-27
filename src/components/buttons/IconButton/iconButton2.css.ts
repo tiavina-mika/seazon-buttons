@@ -36,6 +36,9 @@ export const iconButtonVariants = recipe({
         "&:hover": {
           cursor: "none",
         },
+        "& img": {
+          opacity: 0.7,
+        },
       },
     },
   },

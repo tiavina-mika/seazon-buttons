@@ -37,9 +37,11 @@ const IconButtons = () => {
       <div className={classes.section}>
         <Title>Disabled</Title>
         <div className={classes.buttons}>
-          <IconButton variant="default" disabled>
-            <Preferences size="md" />
-          </IconButton>
+          {variants.map((variant, index) => (
+            <IconButton variant={variant} key={index} disabled>
+              <Preferences size="md" />
+            </IconButton>
+          ))}
         </div>
       </div>
     </div>
