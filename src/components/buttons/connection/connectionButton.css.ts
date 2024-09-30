@@ -1,17 +1,12 @@
 import { theme } from "../../../styles/theme.css";
 import { style } from "@vanilla-extract/css";
-// import {
-//   base,
-//   variants,
-//   defaultVariants,
-//   disabledCompountVariants,
-// } from "../connexionButton.css";
 
 export const root = style({
   display: "flex",
   width: "352px",
   height: "48px",
   padding: 24,
+  position: "relative",
   // justifyContent: 'center',
   alignItems: "center",
   // gap: 8,
@@ -34,7 +29,11 @@ export const loading = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  width: 24, // important
+  width: 24,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
 });
 
 export const content = style({

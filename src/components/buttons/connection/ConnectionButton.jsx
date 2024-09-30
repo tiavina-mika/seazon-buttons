@@ -24,8 +24,7 @@ const ConnectionButton = ({
       <Icon src="/icons/google.svg" />
       <div className={classes.content}>
         {loading ? (
-          // <div className={classes.loading}>
-          <img alt="" src="/icons/loading.svg" />
+          <img alt="" src="/icons/loading.svg" className={classes.loading} />
         ) : (
           // </div>
           <span>Se connecter avec Google</span>
