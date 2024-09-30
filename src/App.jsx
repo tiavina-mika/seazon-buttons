@@ -5,12 +5,13 @@ import { seazonTheme } from "./styles/seazontheme.css";
 import * as classes from "./app.css";
 import ShoppingButtons from "./containers/ShoppingButtons";
 import ProgressBarButtons from "./containers/ProgressBarButtons";
-import "./index.css";
 import IconButtons from "./containers/IconButtons";
 import Switch from "./components/buttons/switch/Switch";
 import ConnectionButton from "./components/buttons/connection/ConnectionButton";
 import ApplastoreButton from "./components/buttons/store/ApplastoreButton";
 import GoogleplayButton from "./components/buttons/store/GoogleplayButton";
+import ButtonGroup from "./components/buttons/buttonGroup/ButtonGroup";
+import "./index.css";
 
 const tabs = [
   "buttons",
@@ -20,10 +21,11 @@ const tabs = [
   "switch",
   "connexion",
   "store",
+  "group",
 ];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(6);
+  const [selectedTab, setSelectedTab] = useState(7);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -63,6 +65,14 @@ const App = () => {
             <div className={classes.connection}>
               <ApplastoreButton />
               <GoogleplayButton />
+            </div>
+          )}
+          {selectedTab === 7 && (
+            <div className={classes.connection}>
+              <ButtonGroup spacing="justify" onSecondaryClick={() => {}} />
+              <ButtonGroup spacing="center" onSecondaryClick={() => {}} />
+              <ButtonGroup onSecondaryClick={() => {}} />
+              <ButtonGroup direction="column" />
             </div>
           )}
         </div>
