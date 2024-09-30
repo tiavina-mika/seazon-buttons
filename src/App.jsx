@@ -9,6 +9,8 @@ import "./index.css";
 import IconButtons from "./containers/IconButtons";
 import Switch from "./components/buttons/switch/Switch";
 import ConnectionButton from "./components/buttons/connection/ConnectionButton";
+import ApplastoreButton from "./components/buttons/store/ApplastoreButton";
+import GoogleplayButton from "./components/buttons/store/GoogleplayButton";
 
 const tabs = [
   "buttons",
@@ -17,10 +19,11 @@ const tabs = [
   "icon button",
   "switch",
   "connexion",
+  "store",
 ];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(5);
+  const [selectedTab, setSelectedTab] = useState(6);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -54,6 +57,12 @@ const App = () => {
               <ConnectionButton />
               <ConnectionButton loading />
               <ConnectionButton disabled />
+            </div>
+          )}
+          {selectedTab === 6 && (
+            <div className={classes.connection}>
+              <ApplastoreButton />
+              <GoogleplayButton />
             </div>
           )}
         </div>
