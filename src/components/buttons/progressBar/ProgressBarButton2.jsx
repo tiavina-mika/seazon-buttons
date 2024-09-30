@@ -3,11 +3,17 @@ import classNames from "classnames";
 import * as classes from "./progressBarButton.css";
 import { buttonText } from "../buttonBase.css";
 
-const ProgressBarButton = ({ text, loading = false, value = 0, onClick }) => {
+const ProgressBarButton = ({
+  text,
+  loading = false,
+  value = 0,
+  onClick,
+  className,
+}) => {
   const isActive = value >= 100;
 
   return (
-    <div className={classes.buttonContainer}>
+    <div className={classNames(classes.buttonContainer, className)}>
       <button
         className={classNames(classes.button, buttonText, {
           [classes.buttonEnabled]: isActive,

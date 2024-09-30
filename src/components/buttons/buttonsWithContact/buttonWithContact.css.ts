@@ -20,6 +20,7 @@ export const contactButton = style({
   border: "none",
   right: 4,
   top: 0,
+  zIndex: 1000,
 });
 
 export const button = style({
@@ -32,4 +33,8 @@ export const shoppingButton = style({
   display: "flex",
   justifyContent: "center",
   gap: 50,
+});
+
+export const progressBarButton = style({
+  width: "100%",
 });

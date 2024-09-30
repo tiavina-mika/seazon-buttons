@@ -1,4 +1,5 @@
 import ButtonWithContact from "../components/buttons/buttonsWithContact/ButtonWithContact";
+import ProgressBarButtonWithContact from "../components/buttons/buttonsWithContact/ProgressBarButtonWithContact";
 import ShoppingButtonWithContact from "../components/buttons/buttonsWithContact/ShoppingButtonWithContact";
 import * as classes from "./section.css";
 
@@ -10,6 +11,7 @@ const ButtonsWithContact = () => {
         text="Button"
         onClick={() => console.log("clicked")}
       />
+      <ProgressBarButtonWithContact text="Button" />
     </div>
   );
 };
