@@ -20,7 +20,6 @@ export const base = style({
 });
 
 export const buttonText = style({
-  // Text
   fontWeight: 500,
   letterSpacing: 0.3,
   lineHeight: 1,

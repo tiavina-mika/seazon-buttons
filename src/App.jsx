@@ -53,6 +53,7 @@ const App = () => {
             <div className={classes.connection}>
               <ConnectionButton />
               <ConnectionButton loading />
+              <ConnectionButton disabled />
             </div>
           )}
         </div>

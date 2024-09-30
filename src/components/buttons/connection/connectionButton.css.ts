@@ -39,3 +39,8 @@ export const loading = style({
 export const content = style({
   flex: 1,
 });
+
+export const disabled = style({
+  backgroundColor: theme.palette.background.disabled.light,
+  color: theme.palette.text.disabled.default,
+});

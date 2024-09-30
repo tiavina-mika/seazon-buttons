@@ -16,6 +16,9 @@ const ConnectionButton = ({
         base,
         classes.root,
         buttonText,
+        {
+          [classes.disabled]: disabled,
+        },
         // classes.buttonVariants({ size, variant, disabled, loading }),
         className
       )}
