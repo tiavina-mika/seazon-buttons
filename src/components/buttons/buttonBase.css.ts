@@ -19,6 +19,15 @@ export const base = style({
   },
 });
 
+export const buttonText = style({
+  // Text
+  fontWeight: 500,
+  letterSpacing: 0.3,
+  lineHeight: 1,
+  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
+  fontSize: 16,
+});
+
 export const variants = {
   variant: {
     default: {

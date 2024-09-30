@@ -26,29 +26,36 @@ const App = () => {
 
   return (
     <div className={seazonTheme}>
-      <div>
-        <div className={classes.tabs}>
-          {tabs.map((tab, index) => (
-            <button
-              key={index}
-              className={classNames(
-                classes.tab,
-                selectedTab === index ? classes.activeTab : null
-              )}
-              onClick={() => handleTabChange(index)}
-            >
-              {tab}
-            </button>
-          ))}
+      <div className={classes.container}>
+        <div>
+          <div className={classes.tabs}>
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                className={classNames(
+                  classes.tab,
+                  selectedTab === index ? classes.activeTab : null
+                )}
+                onClick={() => handleTabChange(index)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-      <div>
-        {selectedTab === 0 && <Buttons />}
-        {selectedTab === 1 && <ShoppingButtons />}
-        {selectedTab === 2 && <ProgressBarButtons />}
-        {selectedTab === 3 && <IconButtons />}
-        {selectedTab === 4 && <Switch />}
-        {selectedTab === 5 && <ConnectionButton />}
+        <div className={classes.panel}>
+          {selectedTab === 0 && <Buttons />}
+          {selectedTab === 1 && <ShoppingButtons />}
+          {selectedTab === 2 && <ProgressBarButtons />}
+          {selectedTab === 3 && <IconButtons />}
+          {selectedTab === 4 && <Switch />}
+          {selectedTab === 5 && (
+            <div className={classes.connection}>
+              <ConnectionButton />
+              <ConnectionButton loading />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

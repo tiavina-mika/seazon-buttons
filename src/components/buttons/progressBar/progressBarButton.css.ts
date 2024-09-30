@@ -59,13 +59,6 @@ export const button = style({
   position: "relative",
   border: "none",
   padding: 0,
-
-  // Text
-  fontWeight: 500,
-  letterSpacing: 0.3,
-  lineHeight: 1,
-  fontFamily: "Neue-Haas-Grotesk-Text-Pro-Roman",
-  fontSize: 16,
 });
 
 export const buttonEnabled = style({

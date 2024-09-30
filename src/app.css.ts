@@ -7,6 +7,12 @@ export const root = style({
   gap: 3,
 });
 
+export const container = style({
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+});
+
 const row = style({
   display: "flex",
   alignItems: "center",
@@ -36,4 +42,16 @@ export const activeTab = style({
   borderBottom: "2px solid " + theme.palette.background.secondary.dark,
   color: theme.palette.background.secondary.dark,
   fontWeight: 600,
+});
+
+export const panel = style({
+  alignSelf: "stretch",
+  flex: 1,
+  padding: 8,
+});
+
+export const connection = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: 12,
 });

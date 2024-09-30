@@ -14,11 +14,20 @@ export const root = style({
   padding: 24,
   // justifyContent: 'center',
   alignItems: "center",
-  gap: 8,
-  flexShrink: 0,
+  // gap: 8,
+  // flexShrink: 0,
   border: "1px solid " + theme.palette.border.neutral.dark,
-  borderRadius: 999999,
+  // borderRadius: 999999,
   backgroundColor: "#fff",
+  cursor: "pointer",
+  fontSize: 16,
+  "&:focus, &:focus-within, &:focus-visible": {
+    border: "2px solid " + theme.palette.border.neutral.dark,
+  },
+  "&:hover": {
+    border: "1px solid " + theme.palette.border.neutral.dark,
+    backgroundColor: theme.palette.backgroundHover.primary.default,
+  },
 });
 
 export const loading = style({

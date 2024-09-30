@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import * as classes from "./progressBarButton.css";
+import { buttonText } from "../buttonBase.css";
 
 const ProgressBarButton = ({ text, loading = false, value = 0, onClick }) => {
   const isActive = value >= 100;
@@ -8,7 +9,7 @@ const ProgressBarButton = ({ text, loading = false, value = 0, onClick }) => {
   return (
     <div className={classes.buttonContainer}>
       <button
-        className={classNames(classes.button, {
+        className={classNames(classes.button, buttonText, {
           [classes.buttonEnabled]: isActive,
         })}
         onClick={!(loading && isActive) ? onClick : undefined}

@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Icon from "../../icons/icon/Icon";
 import * as classes from "./connectionButton.css";
+import { base, buttonText } from "../buttonBase.css";
 
 const ConnectionButton = ({
   variant = "default",
@@ -12,7 +13,9 @@ const ConnectionButton = ({
   return (
     <button
       className={classNames(
+        base,
         classes.root,
+        buttonText,
         // classes.buttonVariants({ size, variant, disabled, loading }),
         className
       )}
