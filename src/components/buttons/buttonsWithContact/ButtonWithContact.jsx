@@ -1,10 +1,11 @@
 import React from "react";
 import * as classes from "./buttonWithContact.css";
 import Button from "../button/Button";
+import classNames from "classnames";
 
-const ButtonWithContact = ({ onClick, text }) => {
+const ButtonWithContact = ({ onClick, text, className }) => {
   return (
-    <div className={classes.root}>
+    <div className={classNames(classes.root, className)}>
       <button className={classes.contactButton}>
         <img alt="" src="/icons/contact-button.svg" />
       </button>
@@ -14,10 +15,6 @@ const ButtonWithContact = ({ onClick, text }) => {
         onClick={onClick}
         className={classes.button}
         size="lg"
-        // className={classNames({
-        //   [classes.activeButton]: direction === "column",
-        //   [classes.buttonInColumn]: direction === "column",
-        // })}
       />
     </div>
   );

@@ -31,5 +31,5 @@ export const button = style({
 export const shoppingButton = style({
   display: "flex",
   justifyContent: "center",
-  gap: 40,
+  gap: 50,
 });
