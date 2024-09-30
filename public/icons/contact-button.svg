@@ -1,0 +1,22 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Contact button">
+<g id="Oval" filter="url(#filter0_d_2728_5429)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36 64C52.5685 64 66 50.5685 66 34C66 17.4315 52.5685 4 36 4C19.4315 4 6 17.4315 6 34C6 50.5685 19.4315 64 36 64Z" fill="#003840"/>
+</g>
+<path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd" d="M36.0904 50.0711C36.0603 50.0712 36.0302 50.0713 36.0001 50.0713C27.1241 50.0713 19.9287 42.8759 19.9287 33.9999C19.9287 25.1239 27.1241 17.9285 36.0001 17.9285C44.8761 17.9285 52.0716 25.1239 52.0716 33.9999C52.0716 39.3484 49.4589 44.0867 45.4401 47.0081C45.8163 49.6967 49.5604 50.0711 49.5604 50.0711H36.0904Z" fill="white"/>
+<path id="Oval 3" fill-rule="evenodd" clip-rule="evenodd" d="M30.4287 35.9998C31.2571 35.9998 31.9287 35.3282 31.9287 34.4998C31.9287 33.6713 31.2571 32.9998 30.4287 32.9998C29.6003 32.9998 28.9287 33.6713 28.9287 34.4998C28.9287 35.3282 29.6003 35.9998 30.4287 35.9998Z" fill="#003840"/>
+<path id="Oval 3 Copy" fill-rule="evenodd" clip-rule="evenodd" d="M35.4287 35.9998C36.2571 35.9998 36.9287 35.3282 36.9287 34.4998C36.9287 33.6713 36.2571 32.9998 35.4287 32.9998C34.6003 32.9998 33.9287 33.6713 33.9287 34.4998C33.9287 35.3282 34.6003 35.9998 35.4287 35.9998Z" fill="#003840"/>
+<path id="Oval 3 Copy.1" fill-rule="evenodd" clip-rule="evenodd" d="M40.3569 35.9998C41.1854 35.9998 41.8569 35.3282 41.8569 34.4998C41.8569 33.6713 41.1854 32.9998 40.3569 32.9998C39.5285 32.9998 38.8569 33.6713 38.8569 34.4998C38.8569 35.3282 39.5285 35.9998 40.3569 35.9998Z" fill="#003840"/>
+</g>
+<defs>
+<filter id="filter0_d_2728_5429" x="0.642858" y="0.785715" width="70.7143" height="70.7143" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.14286"/>
+<feGaussianBlur stdDeviation="2.67857"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2728_5429"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2728_5429" result="shape"/>
+</filter>
+</defs>
+</svg>

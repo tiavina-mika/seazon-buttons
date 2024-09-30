@@ -55,17 +55,14 @@ export const variants = {
     sm: {
       padding: "6px 12px",
       fontSize: 14,
-      // height: 32,
     },
     md: {
       padding: "10px 24px",
       fontSize: 16,
-      // height: 40,
     },
     lg: {
       padding: "14px 24px",
       fontSize: 16,
-      // height: 48,
     },
   },
 };

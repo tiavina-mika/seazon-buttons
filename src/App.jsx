@@ -12,6 +12,7 @@ import ApplastoreButton from "./components/buttons/store/ApplastoreButton";
 import GoogleplayButton from "./components/buttons/store/GoogleplayButton";
 import ButtonGroup from "./components/buttons/buttonGroup/ButtonGroup";
 import "./index.css";
+import ButtonsWithContact from "./containers/ButtonsWithContact";
 
 const tabs = [
   "buttons",
@@ -22,10 +23,11 @@ const tabs = [
   "connexion",
   "store",
   "group",
+  "line",
 ];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(7);
+  const [selectedTab, setSelectedTab] = useState(8);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -75,6 +77,8 @@ const App = () => {
               <ButtonGroup direction="column" />
             </div>
           )}
+
+          {selectedTab === 8 && <ButtonsWithContact />}
         </div>
       </div>
     </div>
