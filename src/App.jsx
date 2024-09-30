@@ -8,11 +8,19 @@ import ProgressBarButtons from "./containers/ProgressBarButtons";
 import "./index.css";
 import IconButtons from "./containers/IconButtons";
 import Switch from "./components/buttons/switch/Switch";
+import ConnectionButton from "./components/buttons/connection/ConnectionButton";
 
-const tabs = ["buttons", "shopping", "progress bar", "icon button", "switch"];
+const tabs = [
+  "buttons",
+  "shopping",
+  "progress bar",
+  "icon button",
+  "switch",
+  "connexion",
+];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(4);
+  const [selectedTab, setSelectedTab] = useState(5);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -40,6 +48,7 @@ const App = () => {
         {selectedTab === 2 && <ProgressBarButtons />}
         {selectedTab === 3 && <IconButtons />}
         {selectedTab === 4 && <Switch />}
+        {selectedTab === 5 && <ConnectionButton />}
       </div>
     </div>
   );
