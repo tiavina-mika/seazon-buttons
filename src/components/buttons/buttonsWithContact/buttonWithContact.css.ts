@@ -5,6 +5,7 @@ import { style } from "@vanilla-extract/css";
 export const root = style({
   position: "relative",
   paddingTop: 30,
+  width: 352,
   "@media": {
     "screen and (min-width: 768px)": {
       paddingTop: 50,
@@ -22,7 +23,13 @@ export const contactButton = style({
 });
 
 export const button = style({
-  minWidth: 352,
+  width: "100%",
   display: "flex",
   justifyContent: "center",
+});
+
+export const shoppingButton = style({
+  display: "flex",
+  justifyContent: "center",
+  gap: 40,
 });

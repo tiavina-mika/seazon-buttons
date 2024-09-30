@@ -12,7 +12,6 @@ export const root = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  // gap: 12, // important
   gap: 6, // important
 });
 
