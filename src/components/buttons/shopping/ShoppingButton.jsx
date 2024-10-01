@@ -15,8 +15,8 @@ const ShoppingButton = ({
   return (
     <div
       className={classNames(
-        classes.root,
         classes.buttonVariants({ size, variant, disabled, loading }),
+        classes.root,
         className
       )}
     >
@@ -26,6 +26,7 @@ const ShoppingButton = ({
           size="xs"
           name={disabled ? "minus-green-disabled" : "minus-green"}
           ariaLabel="Retirer un produit"
+          className={classes.icon}
         />
       )}
       {/* text */}
@@ -43,6 +44,7 @@ const ShoppingButton = ({
           size="xs"
           name={disabled ? "plus-green-disabled" : "plus-green"}
           ariaLabel="Ajouter un produit"
+          className={classes.icon}
         />
       )}
     </div>

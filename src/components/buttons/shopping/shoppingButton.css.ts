@@ -7,7 +7,12 @@ export const root = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  gap: 6, // important
+  gap: 6,
+  cursor: "none !important",
+});
+
+export const icon = style({
+  cursor: "pointer !important",
 });
 
 export const loading = style({

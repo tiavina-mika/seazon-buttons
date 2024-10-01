@@ -3,6 +3,7 @@ import classNames from "classnames";
 import * as classes from "./icon.css";
 
 const Icon = ({
+  className,
   /**
    * full path of the icon
    * if src is provided then name is not required
@@ -34,7 +35,8 @@ const Icon = ({
       className={classNames(
         classes.icon,
         { [classes.iconButton]: !!onClick && !!ariaLabel },
-        classes.sizeVariants[size]
+        classes.sizeVariants[size],
+        className
       )}
       onClick={onClick}
       {...props}
