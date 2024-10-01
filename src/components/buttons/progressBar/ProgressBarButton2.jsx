@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import * as classes from "./progressBarButton.css";
 import { buttonText } from "../buttonBase.css";
 
@@ -43,4 +44,11 @@ const ProgressBarButton = ({
   );
 };
 
+ProgressBarButton.propTypes = {
+  text: PropTypes.string,
+  loading: PropTypes.bool,
+  value: PropTypes.number,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+};
 export default ProgressBarButton;
