@@ -13,6 +13,7 @@ import GoogleplayButton from "./components/buttons/store/GoogleplayButton";
 import ButtonGroup from "./components/buttons/buttonGroup/ButtonGroup";
 import "./index.css";
 import ButtonsWithContact from "./containers/ButtonsWithContact";
+import DotsButton from "./components/buttons/dots/DotsButton";
 
 const tabs = [
   "buttons",
@@ -24,10 +25,11 @@ const tabs = [
   "store",
   "group",
   "line",
+  "dots",
 ];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(8);
+  const [selectedTab, setSelectedTab] = useState(9);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -79,6 +81,7 @@ const App = () => {
           )}
 
           {selectedTab === 8 && <ButtonsWithContact />}
+          {selectedTab === 9 && <DotsButton />}
         </div>
       </div>
     </div>
