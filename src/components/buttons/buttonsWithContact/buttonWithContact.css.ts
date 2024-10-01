@@ -1,5 +1,3 @@
-import { styleVariants } from "@vanilla-extract/css";
-// import { theme } from "../../../styles/theme.css";
 import { style } from "@vanilla-extract/css";
 
 export const root = style({
