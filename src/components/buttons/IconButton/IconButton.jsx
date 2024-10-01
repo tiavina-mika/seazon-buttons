@@ -11,9 +11,7 @@ const IconButton = ({
   return (
     <button
       className={classNames(
-        // classes.root,
         classes.iconButtonVariants({ variant, disabled }),
-        // classes.sizeVariants[size],
         className
       )}
     >

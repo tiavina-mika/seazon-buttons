@@ -14,6 +14,7 @@ import ButtonGroup from "./components/buttons/buttonGroup/ButtonGroup";
 import "./index.css";
 import ButtonsWithContact from "./containers/ButtonsWithContact";
 import DotsButton from "./components/buttons/dots/DotsButton";
+import SliderButton from "./components/buttons/sliderButton/SliderButton";
 
 const tabs = [
   "buttons",
@@ -26,10 +27,11 @@ const tabs = [
   "group",
   "line",
   "dots",
+  "slider",
 ];
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState(9);
+  const [selectedTab, setSelectedTab] = useState(10);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
@@ -82,6 +84,7 @@ const App = () => {
 
           {selectedTab === 8 && <ButtonsWithContact />}
           {selectedTab === 9 && <DotsButton />}
+          {selectedTab === 10 && <SliderButton />}
         </div>
       </div>
     </div>
