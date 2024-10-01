@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import * as classes from "./sliderButton.css";
 import IconButton from "../IconButton/IconButton";
 import Icon from "../../icons/icon/Icon";
@@ -45,4 +46,9 @@ const SliderButton = ({ className, onChange, length = 3 }) => {
   );
 };
 
+SliderButton.propTypes = {
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  length: PropTypes.number,
+};
 export default SliderButton;
