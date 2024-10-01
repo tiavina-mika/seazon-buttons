@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import Icon from "../../icons/icon/Icon";
 import * as classes from "./shoppingButton.css";
 
@@ -23,7 +24,7 @@ const ShoppingButton = ({
       {value !== 0 && (
         <Icon
           size="xs"
-          src={`/icons/minus-green${disabled ? '-disabled' :''}.svg`}
+          src={`/icons/minus-green${disabled ? "-disabled" : ""}.svg`}
           ariaLebel="Retirer un produit"
         />
       )}
@@ -40,7 +41,7 @@ const ShoppingButton = ({
       {!(value === 0 && loading) && (
         <Icon
           size="xs"
-          src={`/icons/plus-green${disabled ? '-disabled' :''}.svg`}
+          src={`/icons/plus-green${disabled ? "-disabled" : ""}.svg`}
           ariaLebel="Ajouter un produit"
         />
       )}
@@ -48,4 +49,12 @@ const ShoppingButton = ({
   );
 };
 
+ShoppingButton.propTypes = {
+  variant: PropTypes.oneOf(["default", "neutral"]),
+  className: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  value: PropTypes.number,
+};
 export default ShoppingButton;
