@@ -1,12 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { theme } from "../../../styles/theme.css";
 import { style } from "@vanilla-extract/css";
-import {
-  base,
-  variants,
-  defaultVariants,
-  disabledCompountVariants,
-} from "../buttonBase.css";
+import { base, variants } from "../buttonBase.css";
 
 export const root = style({
   display: "flex",
@@ -62,7 +57,32 @@ export const buttonVariants = recipe({
 
   // Applied when multiple variants are set at once
   compoundVariants: [
-    ...disabledCompountVariants,
+    {
+      variants: {
+        variant: "default",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.default.backgroundDisabled,
+        "&:hover": {
+          backgroundColor: theme.components.button.default.backgroundDisabled,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "neutral",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.neutral.backgroundDisabled,
+        borderColor: theme.palette.border.disabled.default,
+        "&:hover": {
+          backgroundColor: theme.components.button.neutral.backgroundDisabled,
+          borderColor: theme.palette.border.disabled.default,
+        },
+      },
+    },
     // loading state with different variants
     {
       variants: {
@@ -84,5 +104,10 @@ export const buttonVariants = recipe({
     },
   ],
 
-  defaultVariants,
+  defaultVariants: {
+    variant: "default",
+    size: "md",
+    disabled: false,
+    loading: false,
+  },
 });

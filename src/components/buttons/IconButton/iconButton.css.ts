@@ -1,6 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { theme } from "../../../styles/theme.css";
-import { disabledCompountVariants } from "../buttonBase.css";
 
 export const iconButtonVariants = recipe({
   base: {
@@ -44,18 +43,34 @@ export const iconButtonVariants = recipe({
   },
 
   // Applied when multiple variants are set at once
-  compoundVariants: disabledCompountVariants,
-  // [
-  //   {
-  //     variants: {
-  //       color: "neutral",
-  //       size: "large",
-  //     },
-  //     style: {
-  //       background: "ghostwhite",
-  //     },
-  //   },
-  // ],
+  compoundVariants: [
+    {
+      variants: {
+        variant: "default",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.default.backgroundDisabled,
+        "&:hover": {
+          backgroundColor: theme.components.button.default.backgroundDisabled,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "neutral",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.neutral.backgroundDisabled,
+        borderColor: theme.palette.border.disabled.default,
+        "&:hover": {
+          backgroundColor: theme.components.button.neutral.backgroundDisabled,
+          borderColor: theme.palette.border.disabled.default,
+        },
+      },
+    },
+  ],
 
   defaultVariants: {
     variant: "default",
