@@ -1,11 +1,9 @@
 import { styleVariants } from "@vanilla-extract/css";
-// import { theme } from "../../../styles/theme.css";
 import { style } from "@vanilla-extract/css";
 
 export const base = style({
   display: "flex",
   gap: 16,
-  // maxWidth: 300,
 });
 
 export const directionVariant = styleVariants({
