@@ -3,13 +3,12 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import * as classes from "./buttonWithContact.css";
 import ShoppingButton from "../shopping/ShoppingButton";
+import ContactButton from "./ContactButton";
 
 const ShoppingButtonWithContact = ({ onClick, text, className }) => {
   return (
     <div className={classNames(classes.root, className)}>
-      <button className={classes.contactButton}>
-        <img alt="" src="/icons/contact-button.svg" />
-      </button>
+      <ContactButton />
       <ShoppingButton
         text={text}
         variant="default"

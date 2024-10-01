@@ -3,13 +3,12 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import ProgressBarButton from "../progressBar/ProgressBarButton2";
 import * as classes from "./buttonWithContact.css";
+import ContactButton from "./ContactButton";
 
 const ProgressBarButtonWithContact = ({ onClick, text, className }) => {
   return (
     <div className={classNames(classes.root, className)}>
-      <button className={classes.contactButton}>
-        <img alt="" src="/icons/contact-button.svg" />
-      </button>
+      <ContactButton />
       <ProgressBarButton
         text={text}
         onClick={onClick}
