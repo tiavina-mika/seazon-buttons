@@ -79,5 +79,7 @@ ShoppingButton.propTypes = {
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   value: PropTypes.number,
+  onAdd: PropTypes.func,
+  onRemove: PropTypes.func,
 };
 export default ShoppingButton;
