@@ -1,10 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes";
-import {
-  base,
-  variants,
-  defaultVariants,
-  disabledCompountVariants,
-} from "../buttonBase.css";
+import { base, variants } from "../buttonBase.css";
 import { theme } from "../../../styles/theme.css";
 
 export const buttonVariants = recipe({
@@ -32,12 +27,49 @@ export const buttonVariants = recipe({
           backgroundColor: theme.components.button.text.backgroundHover,
         },
       },
-    }
+    },
   },
 
   // Applied when multiple variants are set at once
   compoundVariants: [
-    ...disabledCompountVariants,
+    {
+      variants: {
+        variant: "default",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.default.backgroundDisabled,
+        "&:hover": {
+          backgroundColor: theme.components.button.default.backgroundDisabled,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "neutral",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.neutral.backgroundDisabled,
+        borderColor: theme.palette.border.disabled.default,
+        "&:hover": {
+          backgroundColor: theme.components.button.neutral.backgroundDisabled,
+          borderColor: theme.palette.border.disabled.default,
+        },
+      },
+    },
+    {
+      variants: {
+        variant: "text",
+        disabled: true,
+      },
+      style: {
+        backgroundColor: theme.components.button.text.backgroundDisabled,
+        "&:hover": {
+          backgroundColor: theme.components.button.text.backgroundDisabled,
+        },
+      },
+    },
     // size variants with text
     {
       variants: {
@@ -87,5 +119,10 @@ export const buttonVariants = recipe({
     },
   ],
 
-  defaultVariants,
+  defaultVariants: {
+    variant: "default",
+    size: "md",
+    disabled: false,
+    loading: false,
+  },
 });
