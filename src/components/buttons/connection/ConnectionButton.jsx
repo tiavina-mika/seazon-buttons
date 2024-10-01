@@ -30,4 +30,9 @@ const ConnectionButton = ({ className, disabled = false, loading = false }) => {
   );
 };
 
+ConnectionButton.propTypes = {
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+};
 export default ConnectionButton;
