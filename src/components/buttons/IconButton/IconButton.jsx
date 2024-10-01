@@ -7,6 +7,7 @@ const IconButton = ({
   className,
   disabled = false,
   children,
+  onClick,
 }) => {
   return (
     <button
@@ -14,6 +15,7 @@ const IconButton = ({
         classes.iconButtonVariants({ variant, disabled }),
         className
       )}
+      onClick={onClick}
     >
       {children}
     </button>

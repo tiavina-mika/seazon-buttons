@@ -7,7 +7,7 @@ const DotsButton = ({ className, onChange, currentIndex = 0, length = 3 }) => {
 
   useEffect(() => {
     setActiveIndex(currentIndex);
-  }, []);
+  }, [currentIndex]);
 
   const handleChange = (index) => {
     setActiveIndex(index);
