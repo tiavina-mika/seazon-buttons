@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import * as classes from "./switch.css";
 
-const Switch = () => {
+const Switch = ({ ariaLabel }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleToggle = () => {
@@ -20,9 +21,14 @@ const Switch = () => {
         className={classNames(classes.slider, {
           [classes.sliderChecked]: isChecked,
         })}
+        ariaLabel={ariaLabel}
+        role="button"
       />
     </label>
   );
 };
 
+Switch.propTypes = {
+  ariaLabel: PropTypes.string,
+};
 export default Switch;

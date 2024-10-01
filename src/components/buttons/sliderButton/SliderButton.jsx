@@ -30,7 +30,7 @@ const SliderButton = ({ className, onChange, length = 3 }) => {
     <div className={classNames(classes.root, className)}>
       {/* left icon */}
       <IconButton onClick={handlePrev} disabled={currentIndex === 0}>
-        <Icon src="/icons/chevron-left-green.svg" alt="left" size="xs" />
+        <Icon name="chevron-left-green" alt="left" size="xs" />
       </IconButton>
       {/* dots */}
       <DotsButton
@@ -40,7 +40,7 @@ const SliderButton = ({ className, onChange, length = 3 }) => {
       />
       {/* right icon */}
       <IconButton onClick={handleNext} disabled={currentIndex === length - 1}>
-        <Icon src="/icons/chevron-right-green.svg" alt="right" size="xs" />
+        <Icon name="chevron-right-green" alt="right" size="xs" />
       </IconButton>
     </div>
   );
