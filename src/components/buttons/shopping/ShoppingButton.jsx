@@ -24,8 +24,8 @@ const ShoppingButton = ({
       {value !== 0 && (
         <Icon
           size="xs"
-          src={`/icons/minus-green${disabled ? "-disabled" : ""}.svg`}
-          ariaLebel="Retirer un produit"
+          name={disabled ? "minus-green-disabled" : "minus-green"}
+          ariaLabel="Retirer un produit"
         />
       )}
       {/* text */}
@@ -41,8 +41,8 @@ const ShoppingButton = ({
       {!(value === 0 && loading) && (
         <Icon
           size="xs"
-          src={`/icons/plus-green${disabled ? "-disabled" : ""}.svg`}
-          ariaLebel="Ajouter un produit"
+          name={disabled ? "plus-green-disabled" : "plus-green"}
+          ariaLabel="Ajouter un produit"
         />
       )}
     </div>
