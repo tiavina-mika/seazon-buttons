@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
-import * as classes from "./iconButton2.css";
+import PropTypes from "prop-types";
+import * as classes from "./iconButton.css";
 
 const IconButton = ({
   variant = "default",
@@ -22,4 +23,11 @@ const IconButton = ({
   );
 };
 
+IconButton.propTypes = {
+  variant: PropTypes.oneOf(["default", "neutral"]),
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
 export default IconButton;

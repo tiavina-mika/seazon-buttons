@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import * as classes from "./DotsButton.css";
 
 const DotsButton = ({ className, onChange, currentIndex = 0, length = 3 }) => {
@@ -34,4 +35,10 @@ const DotsButton = ({ className, onChange, currentIndex = 0, length = 3 }) => {
   );
 };
 
+DotsButton.propTypes = {
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  currentIndex: PropTypes.number,
+  length: PropTypes.number,
+};
 export default DotsButton;
