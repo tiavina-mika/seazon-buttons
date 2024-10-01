@@ -10,27 +10,23 @@ const Button = ({
   size = "md",
   disabled = false,
   loading = false,
-  rightIcon
+  rightIcon,
 }) => {
   return (
     <button
       className={classNames(
-        // classes.root,
         buttonVariants({ size, variant, disabled, loading }),
-        // classes.sizeVariants[size],
         className
       )}
     >
-      {loading
-        ? (
-          <img alt="" src="/icons/loading.svg" />
-        ) : (
-          <>
-            {text}
-            {rightIcon}
-          </>
-        )
-      }
+      {loading ? (
+        <img alt="" src="/icons/loading.svg" />
+      ) : (
+        <>
+          {text}
+          {rightIcon}
+        </>
+      )}
     </button>
   );
 };
