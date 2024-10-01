@@ -31,4 +31,14 @@ const Button = ({
   );
 };
 
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(["default", "neutral", "text"]),
+  className: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  rightIcon: PropTypes.node,
+};
+
 export default Button;
