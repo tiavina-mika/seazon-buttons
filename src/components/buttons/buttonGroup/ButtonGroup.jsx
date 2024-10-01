@@ -8,6 +8,8 @@ const ButtonGroup = ({
   direction = "row",
   spacing = "justify",
   onSecondaryClick,
+  text,
+  secondaryText,
   onClick,
 }) => {
   return (
@@ -18,10 +20,14 @@ const ButtonGroup = ({
       )}
     >
       {onSecondaryClick && (
-        <Button text="Button" variant="text" onClick={onSecondaryClick} />
+        <Button
+          text={secondaryText}
+          variant="text"
+          onClick={onSecondaryClick}
+        />
       )}
       <Button
-        text="Button"
+        text={text}
         variant="default"
         onClick={onClick}
         className={classNames({
@@ -38,6 +44,8 @@ ButtonGroup.propTypes = {
   spacing: PropTypes.oneOf(["justify", "center"]),
   onSecondaryClick: PropTypes.func,
   onClick: PropTypes.func,
+  text: PropTypes.string,
+  secondaryText: PropTypes.string,
 };
 
 export default ButtonGroup;

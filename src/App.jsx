@@ -75,10 +75,28 @@ const App = () => {
           )}
           {selectedTab === 7 && (
             <div className={classes.connection}>
-              <ButtonGroup spacing="justify" onSecondaryClick={() => {}} />
-              <ButtonGroup spacing="center" onSecondaryClick={() => {}} />
-              <ButtonGroup onSecondaryClick={() => {}} />
-              <ButtonGroup direction="column" />
+              <ButtonGroup
+                spacing="justify"
+                text="Button"
+                secondaryText="Button"
+                onSecondaryClick={() => {}}
+              />
+              <ButtonGroup
+                spacing="center"
+                text="Button"
+                secondaryText="Button"
+                onSecondaryClick={() => {}}
+              />
+              <ButtonGroup
+                text="Button"
+                secondaryText="Button"
+                onSecondaryClick={() => {}}
+              />
+              <ButtonGroup
+                text="Button"
+                secondaryText="Button"
+                direction="column"
+              />
             </div>
           )}
 

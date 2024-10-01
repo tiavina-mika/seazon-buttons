@@ -14,16 +14,14 @@ export const buttonVariants = recipe({
         paddingRight: 0,
         backgroundColor: theme.components.button.neutral.background,
         "&:hover": {
-          cursor: "pointer",
           border: "1px solid " + theme.components.button.neutral.border,
           backgroundColor: theme.components.button.neutral.backgroundHover,
         },
       },
       text: {
         textDecoration: "underline",
-        backgroundColor: theme.components.button.text.background,
+        backgroundColor: "transparent",
         "&:hover": {
-          cursor: "pointer",
           backgroundColor: theme.components.button.text.backgroundHover,
         },
       },

@@ -17,6 +17,7 @@ export const base = style({
   "&:focus, &:focus-within, &:focus-visible": {
     border: "2px solid " + theme.palette.border.neutral.dark,
   },
+  cursor: "pointer",
 });
 
 export const buttonText = style({
