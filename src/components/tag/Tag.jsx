@@ -1,56 +1,6 @@
 import React from "react";
-// import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 import * as classes from "./tag.css";
-
-// const useStyles = createUseStyles((theme) => ({
-//   tag: {
-//     display: "flex",
-//     height: 32,
-//     padding: "8px 16px",
-//     alignItems: "center",
-//     gap: 4,
-//     flexShrink: 0,
-//     borderRadius: 999999,
-
-//     // text
-//     overflow: "hidden",
-//     color: "#fff",
-//     textOverflow: "ellipsis",
-//     fontSize: 14,
-//     fontStyle: "normal",
-//     fontWeight: 500,
-//     lineHeight: 1,
-//     letterSpacing: 0.3,
-//   },
-//   center: {
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   closeButton: {
-//     composes: "$center",
-//     backgroundColor: "transparent",
-//     border: "none",
-//     padding: 0,
-//     marginLeft: 2,
-//     cursor: "pointer",
-//   },
-//   icon: {
-//     composes: "$center",
-//     marginRight: 4,
-//   },
-//   primary: {
-//     backgroundColor: theme.palette.background.neutral.dark,
-//     color: theme.palette.text.neutral.white,
-//     "&:focus, &:focus-within, &:focus-visible": {
-//       border: "2px solid " + theme.palette.border.primary.default,
-//     },
-//     "&:hover": {
-//       backgroundColor: theme.palette.backgroundHover.success.default,
-//     },
-//   },
-// }));
 
 const Tag = ({
   // left icon
