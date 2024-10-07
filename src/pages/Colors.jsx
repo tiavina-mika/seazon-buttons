@@ -1,10 +1,13 @@
 import { useState } from "react";
 import classNames from "classnames";
-import BackgroundColors from "../components/colors/background/BackgroundColors";
-// import BackgroundColors from "../components/colors/background/BackgroundColors";
 import * as classes from "../app.css";
+import Background from "../components/palette/Background";
+import DefaultColors from "../components/palette/Colors";
+import Border from "../components/palette/Border";
+import Icon from "../components/palette/Icon";
+import Text from "../components/palette/Text";
 
-const tabs = ["buttons"];
+const tabs = ["colors", "background", "border", "icon", "text"];
 
 const Colors = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -30,7 +33,11 @@ const Colors = () => {
         </div>
       </div>
       <div className={classes.panel}>
-        {selectedTab === 0 && <BackgroundColors />}
+        {selectedTab === 0 && <DefaultColors />}
+        {selectedTab === 1 && <Background />}
+        {selectedTab === 2 && <Border />}
+        {selectedTab === 3 && <Icon />}
+        {selectedTab === 4 && <Text />}
       </div>
     </div>
   );

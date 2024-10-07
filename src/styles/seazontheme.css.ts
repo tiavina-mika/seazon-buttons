@@ -4,7 +4,7 @@
 import { createTheme } from "@vanilla-extract/css";
 import { theme } from "./theme.css";
 
-const colors = {
+export const colors = {
   neutral: {
     100: "#FFFFFF",
     200: "#F4F4F4",
@@ -209,7 +209,7 @@ const iconColor = {
   },
 };
 
-const palette = {
+export const palette = {
   background: backgroundColor,
   backgroundHover: backgroundColorHover,
   text: textColor,
