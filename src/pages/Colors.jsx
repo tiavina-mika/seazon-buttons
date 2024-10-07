@@ -1,21 +1,18 @@
 import { useState } from "react";
 import classNames from "classnames";
-import { seazonTheme } from "./styles/seazontheme.css";
-import * as classes from "./app.css";
+import BackgroundColors from "../components/colors/background/BackgroundColors";
+// import BackgroundColors from "../components/colors/background/BackgroundColors";
+import * as classes from "../app.css";
 
-import "./index.css";
-import Buttons from "./pages/Buttons.jsx";
-import Colors from "./pages/Colors.jsx";
+const tabs = ["buttons"];
 
-const tabs = ["buttons", "colors"];
-
-const App = () => {
-  const [selectedTab, setSelectedTab] = useState(1);
+const Colors = () => {
+  const [selectedTab, setSelectedTab] = useState(0);
 
   const handleTabChange = (index) => setSelectedTab(index);
 
   return (
-    <div className={seazonTheme}>
+    <div className={classes.container}>
       <div>
         <div className={classes.tabs}>
           {tabs.map((tab, index) => (
@@ -32,10 +29,11 @@ const App = () => {
           ))}
         </div>
       </div>
-      {selectedTab === 0 && <Buttons />}
-      {selectedTab === 1 && <Colors />}
+      <div className={classes.panel}>
+        {selectedTab === 0 && <BackgroundColors />}
+      </div>
     </div>
   );
 };
 
-export default App;
+export default Colors;
